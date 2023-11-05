@@ -28,4 +28,4 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
-**[Nov 2023]** Link to open positions
+**[Nov 2023]** Open positions are coming very soon
