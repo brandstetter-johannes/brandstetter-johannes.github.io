@@ -1,0 +1,332 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.0.0-beta.1 for Hugo">
+<meta name=author content="Johannes Brandstetter">
+<meta name=description content="A brief introduction to Categorical Normalizing Flows and permutation-invariant graph generation using GraphCNF">
+<link rel=alternate hreflang=en-us href=https://brandstetter-johannes.github.io/post/categorical-nf/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="#1565c0">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin=anonymous media=print onload="this.media='all'">
+<script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin=anonymous async></script>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<link rel=stylesheet href=/css/wowchemy.b17ce4f35976ea0b0e8e0291231cd424.css>
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png>
+<link rel=canonical href=https://brandstetter-johannes.github.io/post/categorical-nf/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Johannes Brandstetter">
+<meta property="og:url" content="https://brandstetter-johannes.github.io/post/categorical-nf/">
+<meta property="og:title" content="Normalizing Flows on categorical data | Johannes Brandstetter">
+<meta property="og:description" content="A brief introduction to Categorical Normalizing Flows and permutation-invariant graph generation using GraphCNF"><meta property="og:image" content="https://brandstetter-johannes.github.io/post/categorical-nf/featured.png">
+<meta property="twitter:image" content="https://brandstetter-johannes.github.io/post/categorical-nf/featured.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2021-01-23T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-01-23T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/post/categorical-nf/"},"headline":"Normalizing Flows on categorical data","image":["https://brandstetter-johannes.github.io/post/categorical-nf/featured.png"],"datePublished":"2021-01-23T00:00:00Z","dateModified":"2021-01-23T00:00:00Z","author":{"@type":"Person","name":"Johannes Brandstetter"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"A brief introduction to Categorical Normalizing Flows and permutation-invariant graph generation using GraphCNF"}</script>
+<title>Normalizing Flows on categorical data | Johannes Brandstetter</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper>
+<script src=/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Johannes Brandstetter</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Johannes Brandstetter</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#news><span>News</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#research><span>Research</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#talks><span>Talks</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#posts><span>Posts</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/experience/#experience><span>Experience</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/experience/#teaching><span>Teaching</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Normalizing Flows on categorical data</h1>
+<p class=page-subtitle>A brief introduction to Categorical Normalizing Flows and GraphCNF</p>
+<div class=article-metadata>
+<div>
+<span>
+Johannes Brandstetter</span>
+</div>
+<span class=article-date>
+Jan 23, 2021
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+7 min read
+</span>
+<span class=middot-divider></span>
+<span class=article-categories>
+<i class="fas fa-folder mr-1"></i><a href=/category/publications/>Publications</a></span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<p>Ever since Generative Adversarial Networks have shown to generate realistic fake images, or GPT3 creating new, convincing text snippets, generative modeling has been a very popular research area, but also for future applications. One family of generative models, that allows both efficient sampling (i.e. generating new data) and exact density evaluation (i.e. determining the likelihood of a sample) is Normalizing Flows. Normalizing Flows model distributions by applying a sequence of invertible transformations mapping the input distribution to a known base distribution such as a factorized Gaussian. Successful applications include image and audio generation. However, a lot of real world data is categorical nature where variables represent a discrete value in a finite set. For instance, language is based on categorical data as words or characters represent different categories. Another popular example is molecule graphs where not only the nodes can be one out of many atom types, but also the edges (i.e. bonds between atoms) can have different categories. In this blog post, we will discuss what challenges there are for Normalizing Flows to be applied to categorical data, how Categorical Normalizing Flow offer a solution to those, and how we can extend this framework to a permutation-invariant graph generation model.</p>
+<figure>
+<img src=intro_categorical_data.svg width=70%>
+<figcaption><b>Figure 1</b>: Common applications that involve categorical data are language modeling (left) and use cases in biology and chemistry like molecule generation (right).</figcaption>
+</figure>
+<h2 id=normalizing-flows-on-categorical-data>Normalizing Flows on categorical data</h2>
+<p>Normalizing Flows rely on the rule of change of variables which is naturally defined on continuous space. Attempts to apply Normalizing Flows directly on discrete data by discretizing their transformations suffer from optimization difficulties as biased gradient estimator need to be used. Besides, Discrete Normalizing Flows are not as flexible as their continuous counterparts. In the context of image modeling, a popular technique is to move the images into continuous space by <em>dequantizing</em> the discrete data, effectively adding a small amount of noise to transform a discrete point to a volume in continuous space. However, this works for images because their discrete values represent integers where 0 is closer to 1 than 128, and so on. In terms of categorical data, we cannot take such assumptions (for instance, is the letter <em>a</em> closer to <em>m</em> or <em>r</em>?). Instead, we would need a learnable encoding function from categorical to continuous space, which supports higher dimensions to represent more complex relations between categories. At the same time, no information should be lost when moving into continuous space, as we want to use all the benefits of Normalizing Flows.</p>
+<p>Categorical Normalizing Flows offer a solution to this problem by using variational inference, but with a factorized decoder. In a VAE, an encoder maps the whole input to a smaller latent space, and a consecutive decoder tries to reconstruct the original input. In contrast, in Categorical Normalizing Flows, the encoder maps each categorical variable to a corresponding continuous variable in latent space, and the decoder is independently applied on those latent variables. A standard Normalizing Flow can then be applied on those continuous variables to map to a prior distribution like a Gaussian. This way, only the flow can model interactions between categorical variables, and the encoder-decoder framework is limited to providing suitable continuous representations to the flow. An overview of this architecture is given in the figure below, and details on this approach can be found in our <a href="https://openreview.net/pdf?id=-GLNZeVDuik" target=_blank rel=noopener>paper</a>.</p>
+<figure>
+<img src=flow_structure.svg width=90%>
+<figcaption><b>Figure 2</b>: An encoder $q$ maps the categorical input $x$ (here text) to continuous latent variables $z$. Each word is thereby represented by a separate two-dimensional latent variable, based on which the decoder reconstructs the categorical data. The Normalizing Flow learns to map the continuous representations to a prior distribution, such as a Gaussian.</figcaption>
+</figure>
+<p>In experiments on sets and language modeling, Categorical Normalizing Flows are able to match the performance of non-latent based autoregressive baselines while considerably outperforming VAE-based approaches with joint decoders. This shows the effectivity of using a factorized decoder, and focusing the modeling complexity into the flow.</p>
+<h2 id=graphcnf-permutation-invariant-graph-modeling>GraphCNF: permutation-invariant graph modeling</h2>
+<p>Besides language, graph generation is another domain where categorical data plays an essential role. To make it more specific, we put our focus here on molecule generation, but note that the approach outlined below can also be applied to other graph generation tasks with categorical attributes, such as graph coloring.</p>
+<p>Modeling and generating graphs is crucial in biology and chemistry for applications such as drug discovery, where molecule generation has emerged as a common benchmark. In a molecule graph, the nodes are atoms and he edges represent bonds between atoms, both represented by categorical features. The figure below shows a small molecule and its corresponding graph representation as an example.</p>
+<figure>
+<img src=molecule_graph.svg width=70%>
+<figcaption><b>Figure 3</b>: The molecule on the left can be represented as graph by considering its atoms as nodes, and bonds as edges. The different colors of nodes and edges in the graph on the right visualize different categories. Note that the nodes without text in the molecule on the left are carbon atoms.</figcaption>
+</figure>
+<p>Given a dataset of existing molecules, the goal is to learn a distribution of valid molecules as not all possible combinations of atoms and bonds are valid. We train the model via maximum likelihood on the existing data. Thereby, we need to model three parts of the graph: the node attributes (i.e. atom types), the edge attributes (i.e. bond category), and the adjacency matrix (i.e. whether two atoms have a bond at all or not). Furthermore, another challenge is that the nodes are unordered, meaning they have to be considered as a set and not as a list. Hence, any permutation of the nodes has to be assigned the exact same likelihood.</p>
+<p>Using Categorical Normalizing Flows, we can implement this in a three-step approach as visualized in Figure 4, and call the approach GraphCNF. First, we map the node categories into continuous space using the approach of Categorical Normalizing Flows discussed above. On those latent variables, we apply a small sequence of coupling layers conditioned on the rest of the graph structure. In the second step, we map the edge attributes into continuous space, and apply another set of coupling layers. Finally, in the last step, we add the <em>virtual edges</em>, i.e. the edges that are not present in our graph. We add those as another edge category using Categorical Normalizing Flows, and apply a final set of coupling layers. Note that as those are applied on a fully connected graph now, this is the most expensive step of GraphCNF.</p>
+<figure>
+<img src=graphcnf.svg width=100%>
+<figcaption><b>Figure 4</b>: Visualization of GraphCNF for an example graph of five nodes. We add the node and edge attributes, as well as the virtual edges stepwise to the latent space while leveraging the graph structure in the coupling layers. The last step considers a fully connected graph with features per edge.</figcaption>
+</figure>
+<p>To ensure permutation invariance, all coupling layers use channel-wise masking, and all neural networks in the model are permutation equivariant graph neural networks (i.e. any permutation give the same output, just permuted). When applying this model to molecule generation and randomly sample 10k molecules from it, we see that more than 83% are actual valid molecules. Furthermore, most of them are unique and novel compared to the training dataset, showing that GraphCNF actually generalizes and does not just remember the training examples.</p>
+<figure>
+<img src=molecule_generation_results.svg width=100%>
+<figcaption><b>Figure 5</b>: Results on molecule generation task in comparison to other state-of-the-art models. GraphCNF performs favourably while usign no manually encoded rules during generation.</figcaption>
+</figure>
+<p>The most common failure case we observed was that the sampled graph was not connected, meaning that we actually generate two or more separate graphs. This can happen as in contrast to autoregressive models, it is much harder for parallel models to ensure that every node can be reached from any other node. When considering the biggest subgraph in those generation, we are able to push the validity percentage to 96% without enforcing any explicit rule of molecule graphs. This is a relatively large gap to the closest state-of-the-art autoregressive flow model at the time of writing, GraphAF, and shows the importance of the encoding in Normalizing Flows, and permutation invariance for graph generation in general.</p>
+<h2 id=conclusion>Conclusion</h2>
+<p>In this blog post, we reviewed the key ideas behind Categorical Normalizing Flows and GraphCNF. As Normalizing Flows are naturally defined for continuous data, we can first the map discrete, categorical data into continuous space on which a flow can be applied. While doing so, factorizing the decoder helps by pushing all modeling complexity into the flow. GraphCNF relies on this principle to model graphs with categorical attributes such as molecules. In a three-step approach, it remains efficient yet provides a permutation invariant likelihood estimate of any graph. Future work can attempt to overcome the failure case of subgraph sampling in parallel graph models like GraphCNF, and scale it up to large graphs with more than 100 nodes.</p>
+<p>To read up on all the details of Categorical Normalizing Flows and GraphCNF, please see our paper <a href=../../publication/lippe-2021-categorical/><em>Categorical Normalizing Flows via Continuous Transformations</em></a>.</p>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/normalizing-flows/>Normalizing Flows</a>
+<a class="badge badge-light" href=/tag/graph-generation/>Graph generation</a>
+<a class="badge badge-light" href=/tag/categorical-data/>Categorical data</a>
+</div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/post/categorical-nf/&text=Normalizing%20Flows%20on%20categorical%20data" target=_blank rel=noopener class=share-btn-twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/post/categorical-nf/&t=Normalizing%20Flows%20on%20categorical%20data" target=_blank rel=noopener class=share-btn-facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Normalizing%20Flows%20on%20categorical%20data&body=https://brandstetter-johannes.github.io/post/categorical-nf/" target=_blank rel=noopener class=share-btn-email>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/post/categorical-nf/&title=Normalizing%20Flows%20on%20categorical%20data" target=_blank rel=noopener class=share-btn-linkedin>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Normalizing%20Flows%20on%20categorical%20data%20https://brandstetter-johannes.github.io/post/categorical-nf/" target=_blank rel=noopener class=share-btn-whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/post/categorical-nf/&title=Normalizing%20Flows%20on%20categorical%20data" target=_blank rel=noopener class=share-btn-weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://brandstetter-johannes.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/admin/avatar_hu1f007011a52cba17d97fb088d354cb34_1513563_270x270_fill_q98_lanczos_center.jpg alt="Johannes Brandstetter"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://brandstetter-johannes.github.io/>Johannes Brandstetter</a></h5>
+<h6 class=card-subtitle>Assistant Professor @ JKU Linz, Visiting Researcher @ Microsoft</h6>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=https://github.com/brandstetter-johannes target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/jo_brandstetter target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=KiRvOHcAAAAJ&hl=en" target=_blank rel=noopener>
+<i class="ai ai-google-scholar"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/johannes-brandstetter-55741b116/ target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href=mailto:brandstetter@ml.jku.at>
+<i class="far fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="article-widget content-widget-hr">
+<h3>Related</h3>
+<ul>
+<li><a href=/post/pderefiner/>PDE-Refiner - Achieving Accurate Long Rollouts with Neural PDE Solvers</a></li>
+<li><a href=/post/biscuit/>BISCUIT - Causal Representation Learning from Binary Interactions</a></li>
+</ul>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+</p>
+<p class=powered-by>
+Published with
+<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> —
+the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>
+open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin=anonymous></script>
+<script>const code_highlighting=!0</script>
+<script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",event:"Events",slides:"Slides"}</script>
+<script id=search-hit-fuse-template type=text/x-template>
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js></script>
+</body>
+</html>

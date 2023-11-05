@@ -1,0 +1,823 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.0.0-beta.1 for Hugo">
+<meta name=author content="Johannes Brandstetter">
+<meta name=description content="Assistant Professor @ JKU Linz, Visiting Researcher @ Microsoft">
+<link rel=alternate hreflang=en-us href=https://brandstetter-johannes.github.io/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="#1565c0">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin=anonymous media=print onload="this.media='all'">
+<script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin=anonymous async></script>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<link rel=stylesheet href=/css/wowchemy.b17ce4f35976ea0b0e8e0291231cd424.css>
+<script src=https://identity.netlify.com/v1/netlify-identity-widget.js></script>
+<link rel=alternate href=/index.xml type=application/rss+xml title="Johannes Brandstetter">
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png>
+<link rel=canonical href=https://brandstetter-johannes.github.io/>
+<meta property="twitter:card" content="summary">
+<meta property="og:site_name" content="Johannes Brandstetter">
+<meta property="og:url" content="https://brandstetter-johannes.github.io/">
+<meta property="og:title" content="Johannes Brandstetter">
+<meta property="og:description" content="Assistant Professor @ JKU Linz, Visiting Researcher @ Microsoft"><meta property="og:image" content="https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2023-10-01T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"WebSite","potentialAction":{"@type":"SearchAction","target":"https://brandstetter-johannes.github.io/?q={search_term_string}","query-input":"required name=search_term_string"},"url":"https://brandstetter-johannes.github.io/"}</script>
+<title>Johannes Brandstetter</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#navbar-main class=page-wrapper>
+<script src=/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Johannes Brandstetter</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Johannes Brandstetter</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about data-target=#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#news data-target=#news><span>News</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#research data-target=#research><span>Research</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications data-target=#publications><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/experience/#experience><span>Experience</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/experience/#teaching><span>Teaching</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact data-target=#contact><span>Open Positions</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<span class="js-widget-page d-none"></span>
+<section id=about class="home-section wg-about">
+<div class=home-section-bg></div>
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4">
+<div id=profile>
+<img class="avatar avatar-circle" src=/authors/admin/avatar_hu1f007011a52cba17d97fb088d354cb34_1513563_270x270_fill_q98_lanczos_center.jpg alt="Johannes Brandstetter">
+<div class=portrait-title>
+<h2>Johannes Brandstetter</h2>
+<h3>Assistant Professor @ JKU Linz, Visiting Researcher @ Microsoft</h3>
+<h3>
+<a href=https://www.jku.at/en/institute-for-machine-learning/ target=_blank rel=noopener>
+<span>Johannes Kepler University, Linz, Institute for Machine Learning</span>
+</a>
+</h3>
+</div>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=https://github.com/brandstetter-johannes target=_blank rel=noopener aria-label=github>
+<i class="fab fa-github big-icon"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/jo_brandstetter target=_blank rel=noopener aria-label=twitter>
+<i class="fab fa-twitter big-icon"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=KiRvOHcAAAAJ&hl=en" target=_blank rel=noopener aria-label=google-scholar>
+<i class="ai ai-google-scholar big-icon"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/johannes-brandstetter-55741b116/ target=_blank rel=noopener aria-label=linkedin>
+<i class="fab fa-linkedin big-icon"></i>
+</a>
+</li>
+<li>
+<a href=mailto:brandstetter@ml.jku.at aria-label=envelope>
+<i class="far fa-envelope big-icon"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-12 col-lg-8">
+<h1>About me</h1>
+<div class=article-style>
+<p>I am leading a group &ldquo;AI for data-driven simulations&rdquo; at the <a href=https://www.jku.at/en/institute-for-machine-learning/ target=_blank rel=noopener>Institute for Machine Learning</a> at the Johannes Kepler University (JKU) Linz. Additionally, I am a Visiting Researcher at <a href=https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/ target=_blank rel=noopener>Microsoft Research</a> under the umbrella of Microsoft&rsquo;s AI4Science initiative.</p>
+<p>I have obtained my PhD after working several years at the <a href=https://cms.cern/ target=_blank rel=noopener>CMS experiment at CERN</a>. During this time, I had the privilege of learning from brilliant minds from all around the world, and got the chance to co-author seminal papers in the realm of Higgs boson physics. In 2018, after completing my PhD, my career trajectory shifted towards machine learning, and I was fortunate to join the research group of Mr LSTM Sepp Hochreiter in Linz. Under Sepp&rsquo;s mentorship, I delved into the intricacies of machine learning and modern deep learning over a span of 2.5 years.</p>
+<p>From 2021 to 2023, I had the pleasure of spending three remarkable years in Amsterdam.
+Initially, I was part of the <a href=https://amlab.science.uva.nl/ target=_blank rel=noopener>Amsterdam Machine Learning Lab</a> lead by Max Welling, and subsequently joined Microsoft Research for 2 years. During this period, my passion for Geometric Deep Learning, particularly involving <a href=https://microsoft.github.io/cliffordlayers/ target=_blank rel=noopener>Geometric (Clifford) algebras</a>, and my interest in partial differential equations (PDEs), with a particular focus on <a href=https://microsoft.github.io/pdearena/ target=_blank rel=noopener>developing neural surrogates for (PDEs)</a>, became profound. Most importantly, I pivoted towards large-scale PDEs, <a href=https://microsoft.github.io/ClimaX/ target=_blank rel=noopener>including weather and climate modeling</a>.</p>
+<p>My years in Amsterdam have shaped <a href=https://brandstetter-johannes.github.io/research/data-driven-simulations/ target=_blank rel=noopener>my research vision</a>. I am firmly convinced that AI is on the cusp of disrupting simulations at industry-scale. Every day thousands and thousands of compute hours are spent on simulations of e.g., heat transfers in metals, turbulence modeling in wind channels, fluid flows in pipes, air flow around wind turbines, traffic flow during peak hours, and many more. Many of these processes follow similar underlying patterns, but yet need different and extremely specialized softward to simulate. Even worse, for different parameter settings the costly simulations need to be run at full length from scratch.</p>
+<p>This is what I want to change! Therefore, I have started a new group at JKU Linz which has strong computer vision, numerical simulation, and engineering components. We want to advance data-driven simulations at industry-scale, and place the Austrian industry engine Linz as a center for doing that.</p>
+</div>
+<div class=row>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=news class="home-section wg-blank">
+<div class=home-section-bg></div>
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>News</h1>
+</div>
+<div class="col-12 col-lg-8">
+<style type=text/css rel=stylesheet>li:not(:last-child){margin-bottom:7px}</style>
+<div style=overflow-y:scroll;max-height:400px>
+<p><strong>[Nov 2023]</strong> invest.austria conference! I am participating in a public discussion <a href="https://www.invest-austria.com/de/invest-austria-conference/?gclid=Cj0KCQiAuqKqBhDxARIsAFZELmJ2_f4lQ1aM7rDWudlBjWY2_l06cvXroPXVW7_RAkcKeSeDryBRRe0aApLbEALw_wcB" target=_blank rel=noopener>The Rise of AI: Opportunities and Threats</a> at gorgeous Apothekertrakt Schönbrunn in Vienna.</p>
+<p><strong>[Oct 2023]</strong> PoliTalk &ldquo;Wehrhafte Demokratie – Kampf gegen Fake News und Manipulation&rdquo;. I discussed with the head of state Thomas Stelzer and Ulrike Schiesser on the role of AI when it comes to spreading fake news.</p>
+<p><strong>[Oct 2023]</strong> AI Venture Hub @ Ars Electronica Center Linz! I discussed with Robert Weber, host of the <a href=https://aipod.de/ target=_blank rel=noopener>Industrial AI Podcast</a>, about what it takes to make Linz a worldwide AI hub.</p>
+<p><strong>[Oct 2023]</strong> SimTech2023! I presented our paper <a href=https://brandstetter-johannes.github.io/publication/nguyen-2023-climax/ target=_blank rel=noopener>ClimaX &ndash; A foundation model for weather and climate</a> at the International Conference on Data-Integrated Simulation Science (SimTech2023) in Stuttgart.</p>
+<p><strong>[Oct 2023]</strong> I have started my own group &ldquo;AI for data-driven simulations” at the <a href=https://www.jku.at/en/institute-for-machine-learning/ target=_blank rel=noopener>Institute for Machine Learning</a> at the Johannes Kepler University (JKU) Linz.</p>
+<p><strong>[Sep 2023]</strong> Three papers accepted at NeurIPS 2023! We will present <a href=https://brandstetter-johannes/publication/ruhe-2023-cgenns/ target=_blank rel=noopener>Clifford Group Equivariant Neural Networks</a> as oral, <a href=https://brandstetter-johannes.github.io/publication/lippe-2023-pderefiner/ target=_blank rel=noopener>PDE-Refiner: Achieving Accurate Long Rollouts with Neural PDE Solvers</a> as spotlight and &ldquo;Lie Point Symmetry and Physics Informed Networks&rdquo; as poster in New Orleans.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=research class="home-section wg-pages">
+<div class=home-section-bg></div>
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Research</h1>
+</div>
+<div class="col-12 col-lg-8">
+<div class=card-simple>
+<div class=article-metadata>
+<span class=article-date>
+Oct 1, 2023
+</span>
+</div>
+<a href=/research/data-driven-simulations/>
+<div class=img-hover-zoom><img src=/research/data-driven-simulations/featured_hue401cb86d10535f004ebf0cc43f5e634_94256_77c7abc521347cc0595e7fca117ee9ef.jpg data-src=/research/data-driven-simulations/featured_hue401cb86d10535f004ebf0cc43f5e634_94256_808x455_fill_q98_lanczos_smart1.jpg class="article-banner lazyload" alt="Data-Driven Simulations"></div>
+</a>
+<div class="section-subheading article-title mb-1 mt-3">
+<a href=/research/data-driven-simulations/>Data-Driven Simulations</a>
+</div>
+<a href=/research/data-driven-simulations/ class=summary-link>
+<div class=article-style>
+<p>I am firmly convinced that AI is on the cusp of disrupting simulations at industry-scale. Therefore, I have started a new group at JKU Linz which has strong computer vision, simulation, and engineering components. My vision is shaped by experience both from university and from industry.</p>
+</div>
+</a>
+</div>
+<div class=card-simple>
+<div class=article-metadata>
+<span class=article-date>
+Jan 1, 2021
+</span>
+</div>
+<a href=/research/geometric-deep-learning/>
+<div class=img-hover-zoom><img src=/research/geometric-deep-learning/featured_hu7b08722431809de100db678e0bffd13c_206534_d4b701889b35ba8dd17722c20929a93e.png data-src=/research/geometric-deep-learning/featured_hu7b08722431809de100db678e0bffd13c_206534_808x455_fill_lanczos_smart1_3.png class="article-banner lazyload" alt="Geometric Deep Learning"></div>
+</a>
+<div class="section-subheading article-title mb-1 mt-3">
+<a href=/research/geometric-deep-learning/>Geometric Deep Learning</a>
+</div>
+<a href=/research/geometric-deep-learning/ class=summary-link>
+<div class=article-style>
+<p>My passion for Geometric Deep Learning can be unmistakenly traced back to my physics background. I have contributed to the fields of graph neural networks, equivariant architectures, and neural PDE solvers. Furthermore, I have lead efforts to introduce Lie Point Symmetries, and, most recently, Clifford (Geometric) Algebras into the Deep Learning community.</p>
+</div>
+</a>
+</div>
+<div class=card-simple>
+<div class=article-metadata>
+<span class=article-date>
+Jul 1, 2018
+</span>
+</div>
+<a href=/research/deep-learning/>
+<div class=img-hover-zoom><img src=/research/deep-learning/featured_huf25e885b1382cb4857aade30badbe625_95866_8dad8ff826763cc5cef3566170f17fd2.jpg data-src=/research/deep-learning/featured_huf25e885b1382cb4857aade30badbe625_95866_808x455_fill_q98_lanczos_smart1.jpg class="article-banner lazyload" alt="General Deep Learning"></div>
+</a>
+<div class="section-subheading article-title mb-1 mt-3">
+<a href=/research/deep-learning/>General Deep Learning</a>
+</div>
+<a href=/research/deep-learning/ class=summary-link>
+<div class=article-style>
+<p>After switching from High Energy Physics to Deep Learning, I started working in Reinforcement Learning before pivoting towards Associative Memories and modern Transformer networks. Recent years have shown that scalable ideas, improving the datasets, and clever engineering are the ingredients for ever better Deep Learning models. This totally coincides with my experience, and &ndash; needless to say &ndash; I will continue working on general large-scale Deep Learning directions.</p>
+</div>
+</a>
+</div>
+<div class=card-simple>
+<div class=article-metadata>
+<span class=article-date>
+Jan 1, 2014
+</span>
+</div>
+<a href=/research/high-energy-physics/>
+<div class=img-hover-zoom><img src=/research/high-energy-physics/featured_hud771b9de0130cb391febb22251a3c944_589960_7f657de0bb61435ccdd77358dfae50f1.jpg data-src=/research/high-energy-physics/featured_hud771b9de0130cb391febb22251a3c944_589960_808x455_fill_q98_lanczos_smart1.jpg class="article-banner lazyload" alt="High Energy Physics"></div>
+</a>
+<div class="section-subheading article-title mb-1 mt-3">
+<a href=/research/high-energy-physics/>High Energy Physics</a>
+</div>
+<a href=/research/high-energy-physics/ class=summary-link>
+<div class=article-style>
+<p>I have spent five years (including my PhD) working in the CMS Collaboration at CERN. Most of my research was dedicated to Higgs boson physics.</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=publications class="home-section wg-pages">
+<div class=home-section-bg></div>
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Selected Publications</h1>
+</div>
+<div class="col-12 col-lg-8">
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/lippe-2023-pderefiner/>PDE-Refiner - Achieving Accurate Long Rollouts with Neural PDE Solvers</a>
+</div>
+<a href=/publication/lippe-2023-pderefiner/ class=summary-link>
+<div class=article-style>
+PDE-Refiner is an iterative refinement process that enables neural operator training for accurate and stable predictions over long time horizons. Published at NeurIPS 2023 (<strong>Spotlight</strong>).
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Phillip Lippe</span>, <span>
+Bastiaan S. Veeling</span>, <span>
+Paris Perdikaris</span>, <span>
+Richard E. Turner</span>, <span>
+Johannes Brandstetter</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2308.05732 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/lippe-2023-pderefiner/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://microsoft.github.io/pdearena/ target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://phlippe.github.io/PDERefiner/ target=_blank rel=noopener>
+Project
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://phlippe.github.io/media/PDERefiner_F4LCD_Poster.pdf target=_blank rel=noopener>
+Poster
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://phlippe.github.io/media/PDERefiner_Slides.pdf target=_blank rel=noopener>
+Slides
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://youtu.be/N4IGE6pH7v8 target=_blank rel=noopener>
+Video
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/lippe-2023-pderefiner/>
+<img src=/publication/lippe-2023-pderefiner/featured_huee38579d1f3860c5b9f6758290dc258a_68766_7befbe80ef5c622749b8b601e12673b7.png data-src=/publication/lippe-2023-pderefiner/featured_huee38579d1f3860c5b9f6758290dc258a_68766_150x0_resize_lanczos_3.png alt="PDE-Refiner - Achieving Accurate Long Rollouts with Neural PDE Solvers" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/toshev-2023-lagrangian/>Learning Lagrangian Fluid Mechanics with E(3)-Equivariant Graph Neural Networks</a>
+</div>
+<a href=/publication/toshev-2023-lagrangian/ class=summary-link>
+<div class=article-style>
+We introduce E(3)-equivariant GNNs to two well-studied fluid-flow systems, namely 3D decaying Taylor-Green vortex and 3D reverse Poiseuille flow. Published at GSI 2023.
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Artur P. Toshev</span>, <span>
+Gianluca Galletti</span>, <span>
+Johannes Brandstetter</span>, <span>
+Stefan Adami</span>, <span>
+Nikolaus A. Adams</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2305.15603 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/toshev-2023-lagrangian/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://github.com/tumaer/sph-hae target=_blank rel=noopener>
+Code
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/toshev-2023-lagrangian/>
+<img src=/publication/toshev-2023-lagrangian/featured_hua447d8dbd932acd8d3c0cdf887945c3d_2887471_151782d1a7d4bcb3abad4e4d66028bbd.png data-src=/publication/toshev-2023-lagrangian/featured_hua447d8dbd932acd8d3c0cdf887945c3d_2887471_150x0_resize_lanczos_3.png alt="Learning Lagrangian Fluid Mechanics with E(3)-Equivariant Graph Neural Networks" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/ruhe-2023-cgenns/>Clifford Group Equivariant Neural Networks</a>
+</div>
+<a href=/publication/ruhe-2023-cgenns/ class=summary-link>
+<div class=article-style>
+We introduce a novel method to construct E(n)- and O(n)-equivariant neural networks using Clifford algebras. Published at NeurIPS 2023 (Oral).
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+David Ruhe</span>, <span>
+Johannes Brandstetter</span>, <span>
+Patrick Forré</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2305.11141 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/ruhe-2023-cgenns/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://github.com/DavidRuhe/clifford-group-equivariant-neural-networks target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://davidruhe.github.io/2023/06/14/clifford-group.html target=_blank rel=noopener>
+Blog post
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/ruhe-2023-cgenns/>
+<img src=/publication/ruhe-2023-cgenns/featured_hu702cee5816a8776e86e9b9bae21ebee5_318750_ceba9ab9589ef736bcafa171ff81d10e.png data-src=/publication/ruhe-2023-cgenns/featured_hu702cee5816a8776e86e9b9bae21ebee5_318750_150x0_resize_lanczos_3.png alt="Clifford Group Equivariant Neural Networks" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/ruhe-2023-cgans/>Geometric Clifford Algebra Networks</a>
+</div>
+<a href=/publication/ruhe-2023-cgans/ class=summary-link>
+<div class=article-style>
+We introduce Geometric Clifford Algebra Networks (GCANs) which parameterize combinations of learnable group actions. Published at ICML 2023.
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+David Ruhe</span>, <span>
+Jayesh K. Gupta</span>, <span>
+Steven de Keninck</span>, <span>
+Max Welling</span>, <span>
+Johannes Brandstetter</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2302.06594 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/ruhe-2023-cgans/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://microsoft.github.io/cliffordlayers/ target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/articles/introducing-cliffordlayers-neural-network-layers-inspired-by-clifford-geometric-algebras/ target=_blank rel=noopener>
+Project
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/CGAN-ICML-2023.pdf target=_blank rel=noopener>
+Poster
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://davidruhe.github.io/2023/06/06/ga-layers.html target=_blank rel=noopener>
+Blog post
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/ruhe-2023-cgans/>
+<img src=/publication/ruhe-2023-cgans/featured_hu09f53f46a7368d6e71b797c2b4bae77a_608561_0cc73a6253fad4bf8052eb9fedd3aa66.png data-src=/publication/ruhe-2023-cgans/featured_hu09f53f46a7368d6e71b797c2b4bae77a_608561_150x0_resize_lanczos_3.png alt="Geometric Clifford Algebra Networks" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/nguyen-2023-climax/>ClimaX -- A foundation model for weather and climate</a>
+</div>
+<a href=/publication/nguyen-2023-climax/ class=summary-link>
+<div class=article-style>
+We develop and demonstrate ClimaX, a flexible and generalizable deep learning model for weather and climate science that can be trained using heterogeneous datasets spanning different variables, spatio-temporal coverage, and physical groundings. Published at ICML 2023 (Spotlight).
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Tung Nguyen</span>, <span>
+Johannes Brandstetter</span>, <span>
+Ashish Kapoor</span>, <span>
+Jayesh K. Gupta</span>, <span>
+Aditya Grover</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2301.10343 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/nguyen-2023-climax/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://microsoft.github.io/ClimaX/ target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/introducing-climax-the-first-foundation-model-for-weather-and-climate/ target=_blank rel=noopener>
+Project
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/nguyen-2023-climax/>
+<img src=/publication/nguyen-2023-climax/featured_hu93bdd3af8f278144c793d1b443d55aa4_298564_b8e710582214f1a5b4656dcf556755c0.png data-src=/publication/nguyen-2023-climax/featured_hu93bdd3af8f278144c793d1b443d55aa4_298564_150x0_resize_lanczos_3.png alt="ClimaX -- A foundation model for weather and climate" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/gupta-2022-pdearena/>Towards Multi-spatiotemporal-scale Generalized PDE Modeling</a>
+</div>
+<a href=/publication/gupta-2022-pdearena/ class=summary-link>
+<div class=article-style>
+We present PDEArena, a modern PyTorch Lightning-based deep learning framework for neural PDE modeling. Published at TMLR 07/2023.
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Jayesh K. Gupta</span>, <span>
+Johannes Brandstetter</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://openreview.net/forum?id=dPSTDbGtBY" target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/gupta-2022-pdearena/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://microsoft.github.io/pdearena/ target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/open-sourcing-pdearena-2/ target=_blank rel=noopener>
+Project
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/gupta-2022-pdearena/>
+<img src=/publication/gupta-2022-pdearena/featured_hud1c22a8f18b0f6db5e2bf70123119874_1857220_d18296822f6d31697805e9c8529cfa92.png data-src=/publication/gupta-2022-pdearena/featured_hud1c22a8f18b0f6db5e2bf70123119874_1857220_150x0_resize_lanczos_3.png alt="Towards Multi-spatiotemporal-scale Generalized PDE Modeling" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/brandstetter-2022-clifford/>Clifford Neural Layers for PDE Modeling</a>
+</div>
+<a href=/publication/brandstetter-2022-clifford/ class=summary-link>
+<div class=article-style>
+We introduce neural network layers based on operations on composite objects of scalars, vectors, and higher order objects such as bivectors. Published at ICLR 2023.
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Johannes Brandstetter</span>, <span>
+Rianne van den Berg</span>, <span>
+Max Welling</span>, <span>
+Jayesh Gupta</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2209.04934 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/brandstetter-2022-clifford/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://microsoft.github.io/cliffordlayers/ target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/articles/introducing-cliffordlayers-neural-network-layers-inspired-by-clifford-geometric-algebras/ target=_blank rel=noopener>
+Project
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/Clifford-ICLR-2023-poster.pdf target=_blank rel=noopener>
+Poster
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/Clifford-ICLR-2023.pdf target=_blank rel=noopener>
+Slides
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://davidruhe.github.io/2023/06/06/clifford-layers.html target=_blank rel=noopener>
+Blog post
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/brandstetter-2022-clifford/>
+<img src=/publication/brandstetter-2022-clifford/featured_hu03af85e48f4c48d0a570655a4c0c5a27_78277_55f044e6e85306cc19808520c1c2415d.png data-src=/publication/brandstetter-2022-clifford/featured_hu03af85e48f4c48d0a570655a4c0c5a27_78277_150x0_resize_lanczos_3.png alt="Clifford Neural Layers for PDE Modeling" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/brandstetter-2022-lpsda/>Lie Point Symmetry Data Augmentation for Neural PDE Solvers</a>
+</div>
+<a href=/publication/brandstetter-2022-lpsda/ class=summary-link>
+<div class=article-style>
+We present how to use Lie Point Symmetries of PDEs to improve sample complexity of neural PDE solvers. Published at ICML 2022 (Spotlight).
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Johannes Brandstetter</span>, <span>
+Max Welling</span>, <span>
+Daniel E. Worrall</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2202.07643 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/brandstetter-2022-lpsda/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://github.com/brandstetter-johannes/LPSDA target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/LPSDA-poster.png target=_blank rel=noopener>
+Poster
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/LPSDA-slides.pdf target=_blank rel=noopener>
+Slides
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/brandstetter-2022-lpsda/>
+<img src=/publication/brandstetter-2022-lpsda/featured_hu66aba6c5df72175ba166e18d819f60cb_84862_9230a928ad40db24ffcd91e5526c4a9f.png data-src=/publication/brandstetter-2022-lpsda/featured_hu66aba6c5df72175ba166e18d819f60cb_84862_150x0_resize_lanczos_3.png alt="Lie Point Symmetry Data Augmentation for Neural PDE Solvers" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/brandstetter-2022-mpnn/>Message Passing Neural PDE Solvers</a>
+</div>
+<a href=/publication/brandstetter-2022-mpnn/ class=summary-link>
+<div class=article-style>
+In this work, we introduce a message passing neural PDE solver that replaces all heuristically designed components in numerical PDE solvers with backprop-optimized neural function approximators. Published at ICLR 2022 (Spotlight).
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Johannes Brandstetter</span>, <span>
+Daniel E. Worrall</span>, <span>
+Max Welling</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2202.03376 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/brandstetter-2022-mpnn/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://github.com/brandstetter-johannes/MP-Neural-PDE-Solvers target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/MP-PDE-Solvers_poster.pdf target=_blank rel=noopener>
+Poster
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/MP-PDE-Solvers_slides.pdf target=_blank rel=noopener>
+Slides
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/brandstetter-2022-mpnn/>
+<img src=/publication/brandstetter-2022-mpnn/featured_hue2a54136885907365c2c1e273b5abf80_68594_5d2a7741b5cb7b7d941b5af09b3f3af7.png data-src=/publication/brandstetter-2022-mpnn/featured_hue2a54136885907365c2c1e273b5abf80_68594_150x0_resize_lanczos_3.png alt="Message Passing Neural PDE Solvers" class=lazyload>
+</a>
+</div>
+</div>
+<div class="media stream-item">
+<div class=media-body>
+<div class="section-subheading article-title mb-0 mt-0">
+<a href=/publication/brandstetter-2021-segnn/>Geometric and Physical Quantities Improve E(3) Equivariant Message Passing</a>
+</div>
+<a href=/publication/brandstetter-2021-segnn/ class=summary-link>
+<div class=article-style>
+We generalise steerable E(3) equivariant graph neural networks such that node and edge updates are able to leverage covariant information. Published at ICLR 2022 (Spotlight).
+</div>
+</a>
+<div class="stream-meta article-metadata">
+<div>
+<span>
+Johannes Brandstetter</span>, <span>
+Rob Hesselink</span>, <span>
+Elise van der Pol</span>, <span>
+Erik Bekkers</span>, <span>
+Max Welling</span>
+</div>
+</div>
+<div class=btn-links>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://arxiv.org/abs/2110.02905 target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/publication/brandstetter-2021-segnn/cite.bib>
+Cite
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://github.com/RobDHess/Steerable-E3-GNN target=_blank rel=noopener>
+Code
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/SEGNN_poster.png target=_blank rel=noopener>
+Poster
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=/media/SEGNN_slides.pdf target=_blank rel=noopener>
+Slides
+</a>
+<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://robdhess.github.io/Steerable-E3-GNN/ target=_blank rel=noopener>
+Blog post
+</a>
+</div>
+</div>
+<div class=ml-3>
+<a href=/publication/brandstetter-2021-segnn/>
+<img src=/publication/brandstetter-2021-segnn/featured_hu7b08722431809de100db678e0bffd13c_206534_9173a460f6aa6b47e2d49b87355577af.png data-src=/publication/brandstetter-2021-segnn/featured_hu7b08722431809de100db678e0bffd13c_206534_150x0_resize_lanczos_3.png alt="Geometric and Physical Quantities Improve E(3) Equivariant Message Passing" class=lazyload>
+</a>
+</div>
+</div>
+<div class=see-all>
+<a href=/publication/>
+See all publications
+<i class="fas fa-angle-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=contact class="home-section wg-blank">
+<div class=home-section-bg></div>
+<div class=container>
+<div class=row>
+<div class="col-12 col-lg-4 section-heading">
+<h1>Open Positions</h1>
+</div>
+<div class="col-12 col-lg-8">
+<style type=text/css rel=stylesheet>li:not(:last-child){margin-bottom:7px}</style>
+<div style=overflow-y:scroll;max-height:400px>
+<p><strong>[Sep 2023]</strong> Two papers accepted at NeurIPS 2023! We will present &ldquo;<a href=https://phlippe.github.io/publication/lippe-2023-pderefiner/ target=_blank rel=noopener>PDE-Refiner: Achieving Accurate Long Rollouts with Neural PDE Solvers</a>&rdquo; as spotlight and &ldquo;<a href=https://phlippe.github.io/publication/loewe-2023-rotating/ target=_blank rel=noopener>Rotating Features for Object Discovery</a>&rdquo; as oral in New Orleans.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+</p>
+<p class=powered-by>
+Published with
+<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> —
+the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>
+open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin=anonymous></script>
+<script>const code_highlighting=!0</script>
+<script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",event:"Events",slides:"Slides"}</script>
+<script id=search-hit-fuse-template type=text/x-template>
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script>window.netlifyIdentity&&window.netlifyIdentity.on("init",a=>{a||window.netlifyIdentity.on("login",()=>{document.location.href="/admin/"})})</script>
+<script src=/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js></script>
+</body>
+</html>

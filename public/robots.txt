@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://brandstetter-johannes.github.io/sitemap.xml

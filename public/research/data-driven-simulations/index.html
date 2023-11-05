@@ -1,0 +1,305 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.0.0-beta.1 for Hugo">
+<meta name=author content="Johannes Brandstetter">
+<meta name=description content="I am firmly convinced that AI is on the cusp of disrupting simulations at industry-scale. Therefore, I have started a new group at JKU Linz which has strong computer vision, simulation, and engineering components. My vision is shaped by experience both from university and from industry.">
+<link rel=alternate hreflang=en-us href=https://brandstetter-johannes.github.io/research/data-driven-simulations/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="#1565c0">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin=anonymous media=print onload="this.media='all'">
+<script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin=anonymous async></script>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<link rel=stylesheet href=/css/wowchemy.b17ce4f35976ea0b0e8e0291231cd424.css>
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png>
+<link rel=canonical href=https://brandstetter-johannes.github.io/research/data-driven-simulations/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Johannes Brandstetter">
+<meta property="og:url" content="https://brandstetter-johannes.github.io/research/data-driven-simulations/">
+<meta property="og:title" content="Data-Driven Simulations | Johannes Brandstetter">
+<meta property="og:description" content="I am firmly convinced that AI is on the cusp of disrupting simulations at industry-scale. Therefore, I have started a new group at JKU Linz which has strong computer vision, simulation, and engineering components. My vision is shaped by experience both from university and from industry."><meta property="og:image" content="https://brandstetter-johannes.github.io/research/data-driven-simulations/featured.jpg">
+<meta property="twitter:image" content="https://brandstetter-johannes.github.io/research/data-driven-simulations/featured.jpg"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2023-10-01T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-10-01T00:00:00+00:00">
+<title>Data-Driven Simulations | Johannes Brandstetter</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper>
+<script src=/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Johannes Brandstetter</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Johannes Brandstetter</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#news><span>News</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#research><span>Research</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/experience/#experience><span>Experience</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/experience/#teaching><span>Teaching</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact><span>Open Positions</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Data-Driven Simulations</h1>
+<div class=article-metadata>
+<span class=article-date>
+Oct 1, 2023
+</span>
+</div>
+</div>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:512px;max-height:512px>
+<div style=position:relative>
+<img src=/research/data-driven-simulations/featured.jpg alt class=featured-image>
+<span class=article-header-caption>AI is on the cusp of disrupting simulations at industry-scale</span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<p>My years in Amsterdam &ndash; first at the <a href=https://amlab.science.uva.nl/ target=_blank rel=noopener>Amsterdam Machine Learning Lab</a> and then 2 years at in the <a href=https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/ target=_blank rel=noopener>AI4Science lab</a> at Microsoft Research &ndash; have shaped my research vision. I am firmly convinced that AI is on the cusp of disrupting simulations at industry-scale. Therefore, I have started a new group at JKU Linz which has strong computer vision, numerical simulation, and engineering components. We want to advance data-driven simulations at industry-scale, and place the Austrian industry engine Linz as a center for doing that.</p>
+<h1 id=about-my-research>About my research</h1>
+<p>Working in <a href=https://brandstetter-johannes.github.io/tag/high-energy-physics/ target=_blank rel=noopener>high energy physics</a> means to make the invisible visible. When we published for example the <a href=https://brandstetter-johannes.github.io/publication/cms-higgs/ target=_blank rel=noopener>first direct observation of the Higgs boson decaying into pairs of tau leptons</a> non of the processes, i.e., the Higgs boson signal itself nor the many &lsquo;&lsquo;background&rsquo;&rsquo; processes, was measured directly. Everything needed to be reconstructed from terabytes of detector data, and &ndash; even more fascinating to me &ndash; by using sophisticated physical simulations.</p>
+<p>My first contact with simulations in the context of Deep Learning was through the work on
+<a href=https://brandstetter-johannes.github.io/publication/mayr-2021-bgnn target=_blank rel=noopener>Boundary graph neural networks for 3D simulations</a>, which was financed by the <a href=https://www.ffg.at/en target=_blank rel=noopener>Austrian Research Promotion Agency (FFG)</a> after winning a research grant together with <a href=https://www.aspherix-dem.com/ target=_blank rel=noopener>DCS computing</a>.</p>
+<p>During my years in Amsterdam I fully pivoted towards neural modeling of <a href=https://brandstetter-johannes.github.io/tag/neural-solvers/ target=_blank rel=noopener>partial differential equations (PDEs)</a>. For example:</p>
+<ul>
+<li>In <a href=https://brandstetter-johannes.github.io/publication/brandstetter-2022-mpnn/ target=_blank rel=noopener>Message Passing Neural PDE Solvers</a>, we replaced all heuristically designed components in numerical PDE solvers with backprop-optimized neural function approximators.</li>
+<li>We studied how to use <a href=https://brandstetter-johannes.github.io/publication/brandstetter-2022-lpsda/ target=_blank rel=noopener>Lie Point Symmetries of PDEs</a> to improve sample complexity of neural PDE solvers.</li>
+<li>In <a href=https://brandstetter-johannes.github.io/publication/brandstetter-2022-clifford/ target=_blank rel=noopener>Clifford Neural Layers for PDE Modeling</a> and <a href=https://brandstetter-johannes.github.io/publication/ruhe-2023-cgans/ target=_blank rel=noopener>Geometric Clifford Algebra Networks</a>, we introduced neural network layers for PDE modeling, which are based on operations on composite objects of scalars, vectors, and higher order objects.</li>
+<li>In <a href=https://brandstetter-johannes.github.io/publication/gupta-2022-pdearena/ target=_blank rel=noopener>Towards Multi-spatiotemporal-scale Generalized PDE Modeling</a>, we introduce <a href=https://microsoft.github.io/pdearena/ target=_blank rel=noopener>PDEArena</a>, a modern PyTorch Lightning-based deep learning framework for neural PDE modeling with a plethora of state-of-the art neural PDE surrogates and various temporal PDEs in 1-, 2-, and 3-spatial dimensions.</li>
+<li>In <a href=https://brandstetter-johannes.github.io/publication/nguyen-2023-climax/ target=_blank rel=noopener>ClimaX</a>, we developed a flexible and generalizable deep learning model for weather and climate science that can be trained using heterogeneous datasets. ClimaX is the first foundation model for weather and climate.</li>
+</ul>
+<h1 id=how-to-disrupt-simulations-at-industry-scale>How to disrupt simulations at industry-scale</h1>
+<p>Recent years have shown that scalable ideas, improving the datasets, and clever engineering are the ingredients for ever better Deep Learning systems. LLMs and large-scale computer vision models have given birth to the heavily overused term &ldquo;foundation model&rdquo;.
+After language and computer vision, foundation models have spread over to various disciplines, with <a href=https://www.nature.com/articles/s41586-021-03819-2 target=_blank rel=noopener>AlphaFold</a> as very prominent example.</p>
+<p>I want to go one step further, and bring foundation models to the every-day engineering world, and in doing so, disrupt how our industry works. Every day thousands and thousands of compute hours are spent on simulations of e.g., heat transfers in metals, turbulence modeling in wind channels, fluid flows in pipes, air flow around wind turbines, traffic flow during peak hours, and many more. Many of these processes follow similar underlying patterns, but yet need different and extremely specialized softward to simulate. Even worse, for different parameter settings the costly simulations need to be run at full length from scratch.</p>
+<p>This is what I want to change! Deep Learning techniques are ready to develope models which run simulations in seconds instead of days or even weeks. The hardware is ready to digest high-resolutional industry-scale inputs, e.g., 3D meshes or images, and subsequently sets the stage to train Deep Learning models at scale.</p>
+<p>But what about the data you might ask? Don&rsquo;t we need high-quality ground truth data, which usually must come from the very simulations we are going to replace, presenting us with a proverbial chicken-and-egg problem? Luckily, many of the above mentioned processes have common underlying dynamics &ndash; similar to how different languages share structure and grammar. Simulation data is abundant, we just need to use the right ones, and many of that.</p>
+<p>Personally, I have experienced modern computer vision as one of the driving tools for developing data-driven simulations. But it will take much more. It will need expertise in numerical simulations, geometric and physics-informed deep learning, and engineering at scale. We have already put together a very strong interdisciplinary team with different expertise, and keep hiring. The journey is going to be exciting.</p>
+<h2 id=stay-stuned-first-works-will-appear-soon>Stay stuned, first works will appear soon</h2>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/learning2simulate/>Learning2Simulate</a>
+<a class="badge badge-light" href=/tag/ai4science/>AI4Science</a>
+<a class="badge badge-light" href=/tag/ai4engineering/>AI4Engineering</a>
+<a class="badge badge-light" href=/tag/partial-differential-equations/>Partial Differential Equations</a>
+<a class="badge badge-light" href=/tag/neural-solvers/>Neural Solvers</a>
+<a class="badge badge-light" href=/tag/geometric-deep-learning/>Geometric Deep Learning</a>
+<a class="badge badge-light" href=/tag/deep-learning/>Deep Learning</a>
+</div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/research/data-driven-simulations/&text=Data-Driven%20Simulations" target=_blank rel=noopener class=share-btn-twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/research/data-driven-simulations/&t=Data-Driven%20Simulations" target=_blank rel=noopener class=share-btn-facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Data-Driven%20Simulations&body=https://brandstetter-johannes.github.io/research/data-driven-simulations/" target=_blank rel=noopener class=share-btn-email>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/research/data-driven-simulations/&title=Data-Driven%20Simulations" target=_blank rel=noopener class=share-btn-linkedin>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Data-Driven%20Simulations%20https://brandstetter-johannes.github.io/research/data-driven-simulations/" target=_blank rel=noopener class=share-btn-whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/research/data-driven-simulations/&title=Data-Driven%20Simulations" target=_blank rel=noopener class=share-btn-weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://brandstetter-johannes.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/admin/avatar_hu1f007011a52cba17d97fb088d354cb34_1513563_270x270_fill_q98_lanczos_center.jpg alt="Johannes Brandstetter"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://brandstetter-johannes.github.io/>Johannes Brandstetter</a></h5>
+<h6 class=card-subtitle>Assistant Professor @ JKU Linz, Visiting Researcher @ Microsoft</h6>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=https://github.com/brandstetter-johannes target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/jo_brandstetter target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=KiRvOHcAAAAJ&hl=en" target=_blank rel=noopener>
+<i class="ai ai-google-scholar"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/johannes-brandstetter-55741b116/ target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href=mailto:brandstetter@ml.jku.at>
+<i class="far fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+</p>
+<p class=powered-by>
+Published with
+<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> —
+the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>
+open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin=anonymous></script>
+<script>const code_highlighting=!0</script>
+<script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",event:"Events",slides:"Slides"}</script>
+<script id=search-hit-fuse-template type=text/x-template>
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/wowchemy.min.d4185df71ecf716f1c4e7ef5f3d4e2b8.js></script>
+</body>
+</html>
