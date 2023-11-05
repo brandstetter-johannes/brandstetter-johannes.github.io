@@ -51,7 +51,7 @@ for l in logo_paths:
     if l == "":
         img_html = "<!-- -->" # Just commenting to prevent mixup
     else:
-        img_html = '<div style="position: absolute; right: 10px;"><img src="%s" height="85" width="85"></div>' % l
+        img_html = '<div style="position: absolute; right: 10px;"><img src="%s" height="70" width="70"></div>' % l
     experience_text = experience_text.replace(
         '<div class=card-body>\n<div class="section-subheading',
         '<div class=card-body>%s<div class="section-subheading' % img_html,

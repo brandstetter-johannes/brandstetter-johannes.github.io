@@ -34,7 +34,7 @@ experience:
   - title: Visiting Researcher
     company: Microsoft Research
     company_url: 'https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/'
-    location: Amsterdam (The Netherlands)
+    location: Amsterdam 
     date_start: '2023-10-01'
     date_end: ''
     description: |2-
@@ -43,7 +43,7 @@ experience:
   - title: Senior Researcher
     company: Microsoft Research
     company_url: 'https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/'
-    location: Amsterdam (The Netherlands)
+    location: Amsterdam 
     date_start: '2022-01-01'
     date_end: '2023-09-30'
     description: |2-
@@ -52,7 +52,7 @@ experience:
   - title: ELLIS PostDoc
     company: University of Amsterdam (AMLab)
     company_url: 'https://amlab.science.uva.nl/'
-    location: Amsterdam (The Netherlands)
+    location: Amsterdam 
     date_start: '2022-01-01'
     date_end: '2022-12-31'
     description: |2-
