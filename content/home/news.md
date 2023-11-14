@@ -28,6 +28,8 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
+**[Nov 2023]** ReThink Compliance! I am participating in a public discussion [ReThink Compliance!](https://businesscircle.at/compliance/konferenz/compliance-now/) at Stegersbach.
+
 **[Nov 2023]** invest.austria conference! I am participating in a public discussion [The Rise of AI: Opportunities and Threats](https://www.invest-austria.com/de/invest-austria-conference/?gclid=Cj0KCQiAuqKqBhDxARIsAFZELmJ2_f4lQ1aM7rDWudlBjWY2_l06cvXroPXVW7_RAkcKeSeDryBRRe0aApLbEALw_wcB) at gorgeous Apothekertrakt Schönbrunn in Vienna.
 
 **[Oct 2023]** PoliTalk "Wehrhafte Demokratie – Kampf gegen Fake News und Manipulation". I discussed with the head of state Thomas Stelzer and Ulrike Schiesser on the role of AI when it comes to spreading fake news.
