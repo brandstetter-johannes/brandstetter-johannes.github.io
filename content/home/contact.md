@@ -28,4 +28,4 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
-**[Nov 2023]** Open positions are coming very soon
+**[Nov 2023]** Open positions can be found [here](https://www.jku.at/en/lit-artificial-intelligence-lab/graduate-school/open-positions/#c172980).
