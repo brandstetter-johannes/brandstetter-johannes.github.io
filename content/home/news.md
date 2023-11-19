@@ -40,7 +40,7 @@ design:
 
 **[Oct 2023]** I have started my own group "AI for data-driven simulations” at the [Institute for Machine Learning](https://www.jku.at/en/institute-for-machine-learning/) at the Johannes Kepler University (JKU) Linz.
 
-**[Sep 2023]** Three papers accepted at NeurIPS 2023! We will present [Clifford Group Equivariant Neural Networks](https://brandstetter-johannes/publication/ruhe-2023-cgenns/) as oral, [PDE-Refiner: Achieving Accurate Long Rollouts with Neural PDE Solvers](https://brandstetter-johannes.github.io/publication/lippe-2023-pderefiner/) as spotlight and "Lie Point Symmetry and Physics Informed Networks" as poster in New Orleans.
+**[Sep 2023]** Three papers accepted at NeurIPS 2023! We will present [Clifford Group Equivariant Neural Networks](https://brandstetter-johannes/publication/ruhe-2023-cgenns/) as oral, [PDE-Refiner: Achieving Accurate Long Rollouts with Neural PDE Solvers](https://brandstetter-johannes.github.io/publication/lippe-2023-pderefiner/) as spotlight and [Lie Point Symmetries and Physics-Informed Networks](https://brandstetter-johannes.github.io/publication/akhound-sadegh-2023-lps-pinn/) as poster in New Orleans.
 
 </div>
 
