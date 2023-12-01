@@ -10,7 +10,7 @@ authors:
 - Johannes Brandstetter 
 - Max Welling
 - Siamak Ravanbakhsh
-tags: ['Partial Differential Equations', 'Neural Solvers', 'Lie Point Symmetries', 'Deep Learning']
+tags: ['Partial Differential Equations', 'Neural Solvers', 'Lie Point Symmetries', 'Geometric Deep Learning', 'Deep Learning']
 categories: ['Lie Point Symmetries']
 date: 2023-11-07T12:55:17+02:00
 lastmod: 2023-11-07T12:55:17+02:00

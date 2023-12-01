@@ -28,6 +28,10 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
+**[Nov 2023]** I am featured in the  [Tagesspiegel: ki-simulationen-fuer-die-industrie](https://background.tagesspiegel.de/digitalisierung/ki-simulationen-fuer-die-industrie). 
+
+**[Nov 2023]** I am featured in the [Industriemagazin: ai-forscher-johannes-brandstetter-der-rueckkehrer/](https://industriemagazin.at/news/ai-forscher-johannes-brandstetter-der-rueckkehrer/).
+
 **[Nov 2023]** ReThink Compliance! I am participating in a public discussion [ReThink Compliance!](https://businesscircle.at/compliance/konferenz/compliance-now/) at Stegersbach.
 
 **[Nov 2023]** invest.austria conference! I am participating in a public discussion [The Rise of AI: Opportunities and Threats](https://www.invest-austria.com/de/invest-austria-conference/?gclid=Cj0KCQiAuqKqBhDxARIsAFZELmJ2_f4lQ1aM7rDWudlBjWY2_l06cvXroPXVW7_RAkcKeSeDryBRRe0aApLbEALw_wcB) at gorgeous Apothekertrakt Schönbrunn in Vienna.
