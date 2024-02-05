@@ -1,5 +1,5 @@
 ---
-role: Assistant Professor @ JKU Linz, Visiting Researcher @ Microsoft
+role: Assistant Professor @ JKU Linz, Head of Research (AI4Simulation) @ NXAI
 avatar_filename: avatar.jpg
 # bio: not working
 # interests:
