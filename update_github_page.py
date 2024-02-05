@@ -37,6 +37,7 @@ for dest_path, orig_path in img_paths:
 # Adding logos to experience
 logo_paths = [
     "logos/JKU-Logo.jpg",
+    "logos/JKU-Logo.jpg",
     "logos/logo-microsoft.svg",
     "logos/logo-microsoft.svg",
     "logos/logo-university-of-amsterdam.svg",
