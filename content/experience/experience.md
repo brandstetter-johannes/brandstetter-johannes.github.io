@@ -22,6 +22,14 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Head of Research (AI4Simulation)
+    company: NXAI
+    company_url: https://www.nx-ai.com/
+    location: Linz(Austria)
+    date_start: '2024-02-01'
+    data_end: ''
+    description: I am a Head of Research (AI4Simulation) at the newly funded [NXAI](https://www.nx-ai.com/). More to come soon!
+    
   - title: Assistant Professor, Group Lead
     company: Johannes Kepler University (JKU) 
     company_url: 'https://www.jku.at/en/institute-for-machine-learning/'
@@ -36,7 +44,7 @@ experience:
     company_url: 'https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/'
     location: Amsterdam 
     date_start: '2023-10-01'
-    date_end: ''
+    date_end: '2024-01-31'
     description: |2-
         Visiting Researcher in the [AI4Science lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/) at Microsoft Research. I keep working with my amazing team in Amsterdam/Cambridge/Redmond. We are pushing the limits!
 
