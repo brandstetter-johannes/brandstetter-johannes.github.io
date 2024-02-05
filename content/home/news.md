@@ -28,6 +28,8 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
+**[Feb 2024]** I have started as Head of Research (AI4Simulations) at [NXAI](https://www.nx-ai.com/).
+
 **[Nov 2023]** I am featured in the  [Tagesspiegel: ki-simulationen-fuer-die-industrie](https://background.tagesspiegel.de/digitalisierung/ki-simulationen-fuer-die-industrie). 
 
 **[Nov 2023]** I am featured in the [Industriemagazin: ai-forscher-johannes-brandstetter-der-rueckkehrer/](https://industriemagazin.at/news/ai-forscher-johannes-brandstetter-der-rueckkehrer/).
