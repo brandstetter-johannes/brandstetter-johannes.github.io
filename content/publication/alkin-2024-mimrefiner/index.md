@@ -3,7 +3,7 @@
 
 title: Mim-refiner -- A contrastive learning boost from intermediate pre-trained representations
 subtitle: ''
-summary: 'We introduce MIM (Masked Image Modeling)-Refiner, a contrastive learning boost for pre-trained MIM models..'
+summary: 'We introduce MIM (Masked Image Modeling)-Refiner, a contrastive learning boost for pre-trained MIM models.'
 authors:
 - Benedikt Alkin 
 - Lukas Miklautz
