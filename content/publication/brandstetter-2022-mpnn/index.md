@@ -8,8 +8,8 @@ authors:
 - Johannes Brandstetter 
 - Daniel E. Worrall
 - Max Welling
-tags: ['Partial Differential Equations', 'Learning2Simulate', 'Neural Solvers', 'AI4Science', 'Graph Neural Networks', 'Deep Learning']
-categories: ['Neural Solvers']
+tags: ['Partial Differential Equations', 'Learning2Simulate', 'Neural PDE Solvers', 'AI4Science', 'Graph Neural Networks', 'Deep Learning']
+categories: ['Neural PDE Solvers']
 date: 2022-02-07T12:55:17+02:00
 lastmod: 2022-02-07T12:55:17+02:00
 featured: false

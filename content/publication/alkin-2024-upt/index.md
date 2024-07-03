@@ -1,18 +1,20 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Mim-refiner -- A contrastive learning boost from intermediate pre-trained representations
+title: Universal Physics Transformers -- A Framework For Efficiently Scaling Neural Operators
 subtitle: ''
-summary: 'We introduce MIM (Masked Image Modeling)-Refiner, a contrastive learning boost for pre-trained MIM models..'
+summary: 'We introduce Universal Physics Transformers (UPTs), an efficient and unified learning paradigm for a wide range of spatio-temporal problems. UPTs operate without grid- or particle-based latent structures, enabling flexibility and scalability across meshes and particles.'
 authors:
 - Benedikt Alkin 
-- Lukas Miklautz
-- Sepp Hochreiter
+- Andreas Fürst
+- Simon Schmid
+- Lukas Gruber
+- Markus Holzleitner
 - Johannes Brandstetter
-tags: ['Computer Vision', 'Masked Image Modeling', 'Pretraining', 'Deep Learning']
-categories: ['Computer Vision']
-date: 2024-02-15T12:55:17+02:00
-lastmod: 2024-02-15T12:55:17+02:00
+tags: ['Partial Differential Equations', 'AI4Science', 'Neural PDE Solvers', 'Learning2Simulate', 'Deep Learning']
+categories: ['Learning2Simulate']
+date: 2024-02-19T12:55:17+02:00
+lastmod: 2024-02-19T12:55:17+02:00
 featured: false
 draft: false
 
@@ -20,7 +22,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: 'Message Passing Neural PDE Solver'
+  caption: 'Universal Physics Transformers'
   focal_point: 'TopRight'
   preview_only: false
 
@@ -33,10 +35,9 @@ projects: []
 publishDate: '2022-02-07T12:55:17+02:00'
 publication_types:
 - '1'
-abstract: 'We introduce MIM (Masked Image Modeling)-Refiner, a contrastive learning boost for pre-trained MIM models. MIM-Refiner is motivated by the insight that strong representations within MIM models generally reside in intermediate layers. Accordingly, MIM-Refiner leverages multiple contrastive heads that are connected to different intermediate layers. In each head, a modified nearest neighbor objective constructs semantic clusters that capture semantic information which improves performance on downstream tasks, including off-the-shelf and fine-tuning settings.
-The refinement process is short and simple - yet highly effective. Within a few epochs, we refine the features of MIM models from subpar to state-of-the-art, off-the-shelf features. Refining a ViT-H, pre-trained with data2vec 2.0 on ImageNet-1K, sets a new state-of-the-art in linear probing (84.7%) and low-shot classification among models that are pre-trained on ImageNet-1K. At ImageNet-1K 1-shot classification, MIM-Refiner advances the state-of-the-art to 64.2%, outperforming larger models that were trained on up to 2000 times more data such as DINOv2-g, OpenCLIP-G and MAWS-6.5B.'
+abstract: 'Neural operators, serving as physics surrogate models, have recently gained increased interest. With ever increasing problem complexity, the natural question arises: what is an efficient way to scale neural operators to larger and more complex simulations - most importantly by taking into account different types of simulation datasets. This is of special interest since, akin to their numerical counterparts, different techniques are used across applications, even if the underlying dynamics of the systems are similar. Whereas the flexibility of transformers has enabled unified architectures across domains, neural operators mostly follow a problem specific design, where GNNs are commonly used for Lagrangian simulations and grid-based models predominate Eulerian simulations. We introduce Universal Physics Transformers (UPTs), an efficient and unified learning paradigm for a wide range of spatio-temporal problems. UPTs operate without grid- or particle-based latent structures, enabling flexibility and scalability across meshes and particles. UPTs efficiently propagate dynamics in the latent space, emphasized by inverse encoding and decoding techniques. Finally, UPTs allow for queries of the latent space representation at any point in space-time. We demonstrate diverse applicability and efficacy of UPTs in mesh-based fluid simulations, and steady-state Reynolds averaged Navier-Stokes simulations, and Lagrangian-based dynamics.'
 publication: 'Preprint'
-url_pdf: https://arxiv.org/abs/2402.10093
-url_code: https://github.com/ml-jku/MIM-Refiner
-url_project: https://ml-jku.github.io/MIM-Refiner/
+url_pdf: https://arxiv.org/abs/2402.12365
+url_code: https://github.com/ml-jku/UPT
+url_project: https://ml-jku.github.io/UPT/
 ---
