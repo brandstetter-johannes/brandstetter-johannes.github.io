@@ -1,17 +1,18 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Message Passing Neural PDE Solvers
+title: Mim-refiner -- A contrastive learning boost from intermediate pre-trained representations
 subtitle: ''
-summary: 'In this work, we introduce a message passing neural PDE solver that replaces all heuristically designed components in numerical PDE solvers with backprop-optimized neural function approximators. Published at ICLR 2022 (Spotlight).'
+summary: 'We introduce MIM (Masked Image Modeling)-Refiner, a contrastive learning boost for pre-trained MIM models..'
 authors:
-- Johannes Brandstetter 
-- Daniel E. Worrall
-- Max Welling
-tags: ['Partial Differential Equations', 'Learning2Simulate', 'Neural Solvers', 'AI4Science', 'Graph Neural Networks', 'Deep Learning']
-categories: ['Neural Solvers']
-date: 2022-02-07T12:55:17+02:00
-lastmod: 2022-02-07T12:55:17+02:00
+- Benedikt Alkin 
+- Lukas Miklautz
+- Sepp Hochreiter
+- Johannes Brandstetter
+tags: ['Computer Vision', 'Masked Image Modeling', 'Pretraining', 'Deep Learning']
+categories: ['Computer Vision']
+date: 2024-02-15T12:55:17+02:00
+lastmod: 2024-02-15T12:55:17+02:00
 featured: false
 draft: false
 
@@ -32,10 +33,10 @@ projects: []
 publishDate: '2022-02-07T12:55:17+02:00'
 publication_types:
 - '1'
-abstract: 'The numerical solution of partial differential equations (PDEs) is difficult, having led to a century of research so far. Recently, there have been pushes to build neural--numerical hybrid solvers, which piggy-backs the modern trend towards fully end-to-end learned systems. Most works so far can only generalize over a subset of properties to which a generic solver would be faced, including: resolution, topology, geometry, boundary conditions, domain discretization regularity, dimensionality, etc. In this work, we build a solver, satisfying these properties, where all the components are based on neural message passing, replacing all heuristically designed components in the computation graph with backprop-optimized neural function approximators. We show that neural message passing solvers representationally contain some classical methods, such as finite differences, finite volumes, and WENO schemes. In order to encourage stability in training autoregressive models, we put forward a method that is based on the principle of zero-stability, posing stability as a domain adaptation problem. We validate our method on various fluid-like flow problems, demonstrating fast, stable, and accurate performance across different domain topologies, equation parameters, discretizations, etc., in 1D and 2D.'
-publication: '*10th International Conference on Learning Representations (ICLR), 2022* (**Spotlight**)'
-url_pdf: https://arxiv.org/abs/2202.03376
-url_code: https://github.com/brandstetter-johannes/MP-Neural-PDE-Solvers
-url_poster: https://brandstetter-johannes.github.io/media/MP-PDE-Solvers_poster.pdf
-url_slides: https://brandstetter-johannes.github.io/media/MP-PDE-Solvers_slides.pdf
+abstract: 'We introduce MIM (Masked Image Modeling)-Refiner, a contrastive learning boost for pre-trained MIM models. MIM-Refiner is motivated by the insight that strong representations within MIM models generally reside in intermediate layers. Accordingly, MIM-Refiner leverages multiple contrastive heads that are connected to different intermediate layers. In each head, a modified nearest neighbor objective constructs semantic clusters that capture semantic information which improves performance on downstream tasks, including off-the-shelf and fine-tuning settings.
+The refinement process is short and simple - yet highly effective. Within a few epochs, we refine the features of MIM models from subpar to state-of-the-art, off-the-shelf features. Refining a ViT-H, pre-trained with data2vec 2.0 on ImageNet-1K, sets a new state-of-the-art in linear probing (84.7%) and low-shot classification among models that are pre-trained on ImageNet-1K. At ImageNet-1K 1-shot classification, MIM-Refiner advances the state-of-the-art to 64.2%, outperforming larger models that were trained on up to 2000 times more data such as DINOv2-g, OpenCLIP-G and MAWS-6.5B.'
+publication: 'Preprint'
+url_pdf: https://arxiv.org/abs/2402.10093
+url_code: https://github.com/ml-jku/MIM-Refiner
+url_project: https://ml-jku.github.io/MIM-Refiner/
 ---
