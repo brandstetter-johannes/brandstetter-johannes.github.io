@@ -3,15 +3,15 @@
 
 title: PDE-Refiner - Achieving Accurate Long Rollouts with Neural PDE Solvers
 subtitle: ''
-summary: 'PDE-Refiner is an iterative refinement process that enables neural operator training for accurate and stable predictions over long time horizons. Published at NeurIPS 2023 (**Spotlight**).'
+summary: 'PDE-Refiner is an iterative refinement process that enables neural operator training for accurate and stable predictions over long time horizons. Published at NeurIPS 2023 (Spotlight).'
 authors:
 - Phillip Lippe
 - Bastiaan S. Veeling
 - Paris Perdikaris
 - Richard E. Turner
 - Johannes Brandstetter
-tags: ['Partial Differential Equations', 'AI4Science', 'Neural PDE Solvers', 'Microsoft', 'Deep Learning']
-categories: ['AI4Science']
+tags: ['Partial Differential Equations', 'Learn2Simulate', 'AI4Science', 'Neural Surrogates', 'Neural Operators', 'Microsoft', 'Deep Learning']
+categories: ['Learn2Simulate']
 date: 2023-08-10T12:55:17+02:00
 lastmod: 2023-08-10T12:55:17+02:00
 featured: false

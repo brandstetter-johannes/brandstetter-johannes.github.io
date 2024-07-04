@@ -11,8 +11,8 @@ authors:
 - Lukas Gruber
 - Markus Holzleitner
 - Johannes Brandstetter
-tags: ['Partial Differential Equations', 'AI4Science', 'Neural PDE Solvers', 'Learning2Simulate', 'Deep Learning']
-categories: ['Learning2Simulate']
+tags: ['Partial Differential Equations', 'AI4Science', 'Neural Surrogates', 'Neural Operators', 'Learn2Simulate', 'Deep Learning']
+categories: ['Learn2Simulate']
 date: 2024-02-19T12:55:17+02:00
 lastmod: 2024-02-19T12:55:17+02:00
 featured: false

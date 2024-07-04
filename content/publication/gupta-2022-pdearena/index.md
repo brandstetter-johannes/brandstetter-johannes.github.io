@@ -7,8 +7,8 @@ summary: 'We present PDEArena, a modern PyTorch Lightning-based deep learning fr
 authors:
 - Jayesh K. Gupta
 - Johannes Brandstetter
-tags: ['Partial Differential Equations', 'Learning2Simulate', 'AI4Science', 'Neural Solvers', 'Microsoft', 'Deep Learning']
-categories: ['Learning2Simulate']
+tags: ['Partial Differential Equations', 'Learn2Simulate', 'AI4Science', 'Neural Surrogates', 'Neural Operators', 'Microsoft', 'Deep Learning']
+categories: ['Learn2Simulate']
 date: '2022-09-30'
 lastmod: 2022-09-30T09:16:01+01:00
 featured: false

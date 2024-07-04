@@ -10,8 +10,8 @@ authors:
 - Johannes Brandstetter
 - Stefan Adami
 - Nikolaus A. Adams
-tags: ['Learning2Simulate', 'Geometric Deep Learning', 'AI4Science', 'Graph Neural Networks', 'Equivariance', 'Neural Solvers', 'Lagrangian Fluid Mechanics', 'Deep Learning']
-categories: ['Learning2Simulate']
+tags: ['Partial Differential Equations', 'Learn2Simulate', 'Geometric Deep Learning', 'AI4Science', 'Graph Neural Networks', 'Equivariance', 'Neural Surrogates', 'Lagrangian Fluid Mechanics', 'Deep Learning']
+categories: ['Learn2Simulate']
 date: 2023-05-24T12:55:17+02:00
 lastmod: 2023-05-24T12:55:17+02:00
 featured: false

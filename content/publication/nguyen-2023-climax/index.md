@@ -10,8 +10,8 @@ authors:
 - Ashish Kapoor
 - Jayesh K. Gupta
 - Aditya Grover
-tags: ['Partial Differential Equations', 'Learning2Simulate', 'Weather&Climate', 'AI4Science', 'Neural Solvers', 'Microsoft', 'Deep Learning']
-categories: ['Learning2Simulate']
+tags: ['Partial Differential Equations', 'Learn2Simulate', 'Weather&Climate', 'AI4Science', 'Neural Surrogates', 'Microsoft', 'Deep Learning']
+categories: ['Learn2Simulate']
 date: '2023-01-24'
 lastmod: 2023-01-24T09:47:56+01:00
 featured: false

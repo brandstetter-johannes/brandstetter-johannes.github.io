@@ -9,7 +9,7 @@ authors:
 - Rianne van den Berg
 - Max Welling
 - Jayesh Gupta
-tags: ['Partial Differential Equations', 'Learning2Simulate', 'Clifford Algebras', 'Geometric Algebras', 'Geometric Deep Learning', 'AI4Science', 'Neural Solvers', 'Microsoft', 'Deep Learning']
+tags: ['Partial Differential Equations', 'Learn2Simulate', 'Clifford Algebras', 'Geometric Algebras', 'Geometric Deep Learning', 'AI4Science', 'Neural Surrogates', 'Neural Operators', 'Microsoft', 'Deep Learning']
 categories: ['Geometric Deep Learning']
 date: 2022-09-08T12:55:17+02:00
 lastmod: 2022-09-08T12:55:17+02:00

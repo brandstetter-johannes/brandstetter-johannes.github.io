@@ -11,8 +11,8 @@ authors:
 - Christoph Kloss
 - Sepp Hochreiter
 - Johannes Brandstetter
-tags: ['Learning2Simulate', 'Geometric Deep Learning', 'AI4Science', 'Graph Neural Networks', 'Lagrangian Fluid Mechanics', 'Deep Learning']
-categories: ['Learning2Simulate']
+tags: ['Learn2Simulate', 'Neural Surrogates', 'Geometric Deep Learning', 'AI4Science', 'Graph Neural Networks', 'Lagrangian Fluid Mechanics', 'Deep Learning']
+categories: ['Learn2Simulate']
 date: 2021-06-21T12:55:17+02:00
 lastmod: 2021-06-21T12:55:17+02:00
 featured: false

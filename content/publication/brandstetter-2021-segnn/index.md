@@ -10,7 +10,7 @@ authors:
 - Elise van der Pol
 - Erik Bekkers
 - Max Welling
-tags: ['Learning2Simulate', 'Geometric Deep Learning', 'AI4Science', 'Graph Neural Networks', 'Equivariance', 'Deep Learning']
+tags: ['Learn2Simulate', 'Geometric Deep Learning', 'AI4Science', 'Graph Neural Networks', 'Equivariance', 'Deep Learning']
 categories: ['Geometric Deep Learning']
 date: 2021-10-06T12:55:17+02:00
 lastmod: 2021-10-06T12:55:17+02:00

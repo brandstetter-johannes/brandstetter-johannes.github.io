@@ -10,7 +10,7 @@ authors:
 - Steven de Keninck
 - Max Welling
 - Johannes Brandstetter
-tags: ['Partial Differential Equations', 'Learning2Simulate', 'Clifford Algebras', 'Geometric Algebras', 'Geometric Deep Learning', 'AI4Science', 'Neural Solvers', 'Microsoft', 'Graph Neural Networks', 'Deep Learning']
+tags: ['Partial Differential Equations', 'Learn2Simulate', 'Neural Surrogates', 'Clifford Algebras', 'Geometric Algebras', 'Geometric Deep Learning', 'AI4Science', 'Neural Solvers', 'Microsoft', 'Graph Neural Networks', 'Deep Learning']
 categories: ['Geometric Deep Learning']
 date: 2023-02-13T12:55:17+02:00
 lastmod: 2023-02-13T12:55:17+02:00
