@@ -5,7 +5,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.0.0-beta.1 for Hugo">
 <meta name=author content="Johannes Brandstetter">
-<meta name=description content="We develop and demonstrate ClimaX, a flexible and generalizable deep learning model for weather and climate science that can be trained using heterogeneous datasets spanning different variables, spatio-temporal coverage, and physical groundings. Published at ICML 2023 (Spotlight).">
+<meta name=description content="Aurora leverages the strengths of the foundation modelling approach to produce operational forecasts for a wide variety of atmospheric prediction problems, including those with limited training data, heterogeneous variables, and extreme events">
 <link rel=alternate hreflang=en-us href=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#1565c0">
@@ -28,13 +28,13 @@
 <meta property="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="Johannes Brandstetter">
 <meta property="og:url" content="https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/">
-<meta property="og:title" content="ClimaX -- A foundation model for weather and climate | Johannes Brandstetter">
-<meta property="og:description" content="We develop and demonstrate ClimaX, a flexible and generalizable deep learning model for weather and climate science that can be trained using heterogeneous datasets spanning different variables, spatio-temporal coverage, and physical groundings. Published at ICML 2023 (Spotlight)."><meta property="og:image" content="https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/featured.png">
+<meta property="og:title" content="Aurora -- A foundation Model of the Atmosphere | Johannes Brandstetter">
+<meta property="og:description" content="Aurora leverages the strengths of the foundation modelling approach to produce operational forecasts for a wide variety of atmospheric prediction problems, including those with limited training data, heterogeneous variables, and extreme events"><meta property="og:image" content="https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/featured.png">
 <meta property="twitter:image" content="https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/featured.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2023-01-24T08:47:56+00:00">
-<meta property="article:modified_time" content="2023-01-24T09:47:56+01:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/"},"headline":"ClimaX -- A foundation model for weather and climate","image":["https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/featured.png"],"datePublished":"2023-01-24T08:47:56Z","dateModified":"2023-01-24T09:47:56+01:00","author":{"@type":"Person","name":"Tung Nguyen"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"We develop and demonstrate ClimaX, a flexible and generalizable deep learning model for weather and climate science that can be trained using heterogeneous datasets spanning different variables, spatio-temporal coverage, and physical groundings. Published at ICML 2023 (Spotlight)."}</script>
-<title>ClimaX -- A foundation model for weather and climate | Johannes Brandstetter</title>
+<meta property="article:published_time" content="2024-05-20T08:47:56+00:00">
+<meta property="article:modified_time" content="2024-05-20T09:47:56+01:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/"},"headline":"Aurora -- A foundation Model of the Atmosphere","image":["https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/featured.png"],"datePublished":"2024-05-20T08:47:56Z","dateModified":"2024-05-20T09:47:56+01:00","author":{"@type":"Person","name":"Cristian Bodnar"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"Aurora leverages the strengths of the foundation modelling approach to produce operational forecasts for a wide variety of atmospheric prediction problems, including those with limited training data, heterogeneous variables, and extreme events"}</script>
+<title>Aurora -- A foundation Model of the Atmosphere | Johannes Brandstetter</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper>
 <script src=/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js></script>
@@ -126,41 +126,47 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>ClimaX -- A foundation model for weather and climate</h1>
+<h1>Aurora -- A foundation Model of the Atmosphere</h1>
 <div class=article-metadata>
 <div>
 <span>
-Tung Nguyen</span>, <span>
+Cristian Bodnar</span>, <span>
+Wessel W. Bruinsma</span>, <span>
+Ana Lucic</span>, <span>
+Megan Stanley</span>, <span>
 Johannes Brandstetter</span>, <span>
-Ashish Kapoor</span>, <span>
+Patrick Garvan</span>, <span>
+Maik Riechert</span>, <span>
+Jonathan Weyn</span>, <span>
+Haiyu Dong</span>, <span>
+Anna Vaughan</span>, <span>
 Jayesh K. Gupta</span>, <span>
-Aditya Grover</span>
+Kit Tambiratnam</span>, <span>
+Alex Archibald</span>, <span>
+Elizabeth Heider</span>, <span>
+Max Welling</span>, <span>
+Rich E. Turner</span>, <span>
+Paris Perdikaris</span>
 </div>
 <span class=article-date>
-January 2023
+May 2024
 </span>
 <span class=middot-divider></span>
 <span class=article-categories>
 <i class="fas fa-folder mr-1"></i><a href=/category/learn2simulate/>Learn2Simulate</a></span>
 </div>
 <div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2301.10343 target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2405.13063 target=_blank rel=noopener>
 PDF
 </a>
 <a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/bodnar-2024-aurora/cite.bib>
 Cite
 </a>
-<a class="btn btn-outline-primary btn-page-header" href=https://microsoft.github.io/ClimaX/ target=_blank rel=noopener>
-Code
-</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/introducing-climax-the-first-foundation-model-for-weather-and-climate/ target=_blank rel=noopener>
-Project
-</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Most state-of-the-art approaches for weather and climate modeling are based on physics-informed numerical models of the atmosphere. These approaches aim to model the non-linear dynamics and complex interactions between multiple variables, which are challenging to approximate. Additionally, many such numerical models are computationally intensive, especially when modeling the atmospheric phenomenon at a fine-grained spatial and temporal resolution. Recent data-driven approaches based on machine learning instead aim to directly solve a downstream forecasting or projection task by learning a data-driven functional mapping using deep neural networks. However, these networks are trained using curated and homogeneous climate datasets for specific spatiotemporal tasks, and thus lack the generality of numerical models. We develop and demonstrate ClimaX, a flexible and generalizable deep learning model for weather and climate science that can be trained using heterogeneous datasets spanning different variables, spatio-temporal coverage, and physical groundings. ClimaX extends the Transformer architecture with novel encoding and aggregation blocks that allow effective use of available compute while maintaining general utility. ClimaX is pre-trained with a self-supervised learning objective on climate datasets derived from CMIP6. The pre-trained ClimaX can then be fine-tuned to address a breadth of climate and weather tasks, including those that involve atmospheric variables and spatio-temporal scales unseen during pretraining. Compared to existing data-driven baselines, we show that this generality in ClimaX results in superior performance on benchmarks for weather forecasting and climate projections, even when pretrained at lower resolutions and compute budgets</p>
+<p class=pub-abstract>Deep learning foundation models are revolutionizing many facets of science by leveraging vast amounts of data to learn general-purpose representations that can be adapted to tackle diverse downstream tasks. Foundation models hold the promise to also transform our ability to model our planet and its subsystems by exploiting the vast expanse of Earth system data. Here we introduce Aurora, a large-scale foundation model of the atmosphere trained on over a million hours of diverse weather and climate data. Aurora leverages the strengths of the foundation modelling approach to produce operational forecasts for a wide variety of atmospheric prediction problems, including those with limited training data, heterogeneous variables, and extreme events. In under a minute, Aurora produces 5-day global air pollution predictions and 10-day high-resolution weather forecasts that outperform state-of-the-art classical simulation tools and the best specialized deep learning models. Taken together, these results indicate that foundation models can transform environmental forecasting.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -181,7 +187,7 @@ Journal article
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>40th International Conference on Machine Learning (ICML), 2023</em> (<strong>Spotlight</strong>)</div>
+<div class="col-12 col-md-9">Preprint</div>
 </div>
 </div>
 <div class=col-md-1></div>
@@ -201,32 +207,32 @@ Journal article
 <div class=share-box aria-hidden=true>
 <ul class=share>
 <li>
-<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&text=ClimaX%20--%20A%20foundation%20model%20for%20weather%20and%20climate" target=_blank rel=noopener class=share-btn-twitter>
+<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&text=Aurora%20--%20A%20foundation%20Model%20of%20the%20Atmosphere" target=_blank rel=noopener class=share-btn-twitter>
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&t=ClimaX%20--%20A%20foundation%20model%20for%20weather%20and%20climate" target=_blank rel=noopener class=share-btn-facebook>
+<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&t=Aurora%20--%20A%20foundation%20Model%20of%20the%20Atmosphere" target=_blank rel=noopener class=share-btn-facebook>
 <i class="fab fa-facebook"></i>
 </a>
 </li>
 <li>
-<a href="mailto:?subject=ClimaX%20--%20A%20foundation%20model%20for%20weather%20and%20climate&body=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/" target=_blank rel=noopener class=share-btn-email>
+<a href="mailto:?subject=Aurora%20--%20A%20foundation%20Model%20of%20the%20Atmosphere&body=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/" target=_blank rel=noopener class=share-btn-email>
 <i class="fas fa-envelope"></i>
 </a>
 </li>
 <li>
-<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&title=ClimaX%20--%20A%20foundation%20model%20for%20weather%20and%20climate" target=_blank rel=noopener class=share-btn-linkedin>
+<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&title=Aurora%20--%20A%20foundation%20Model%20of%20the%20Atmosphere" target=_blank rel=noopener class=share-btn-linkedin>
 <i class="fab fa-linkedin-in"></i>
 </a>
 </li>
 <li>
-<a href="whatsapp://send?text=ClimaX%20--%20A%20foundation%20model%20for%20weather%20and%20climate%20https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/" target=_blank rel=noopener class=share-btn-whatsapp>
+<a href="whatsapp://send?text=Aurora%20--%20A%20foundation%20Model%20of%20the%20Atmosphere%20https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/" target=_blank rel=noopener class=share-btn-whatsapp>
 <i class="fab fa-whatsapp"></i>
 </a>
 </li>
 <li>
-<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&title=ClimaX%20--%20A%20foundation%20model%20for%20weather%20and%20climate" target=_blank rel=noopener class=share-btn-weibo>
+<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/publication/bodnar-2024-aurora/&title=Aurora%20--%20A%20foundation%20Model%20of%20the%20Atmosphere" target=_blank rel=noopener class=share-btn-weibo>
 <i class="fab fa-weibo"></i>
 </a>
 </li>
@@ -236,10 +242,10 @@ Journal article
 <h3>Related</h3>
 <ul>
 <li><a href=/publication/nguyen-2023-climax/>ClimaX -- A foundation model for weather and climate</a></li>
-<li><a href=/publication/gupta-2022-pdearena/>Towards Multi-spatiotemporal-scale Generalized PDE Modeling</a></li>
 <li><a href=/publication/lippe-2023-pderefiner/>PDE-Refiner - Achieving Accurate Long Rollouts with Neural PDE Solvers</a></li>
+<li><a href=/publication/gupta-2022-pdearena/>Towards Multi-spatiotemporal-scale Generalized PDE Modeling</a></li>
 <li><a href=/publication/ruhe-2023-cgans/>Geometric Clifford Algebra Networks</a></li>
-<li><a href=/publication/brandstetter-2022-clifford/>Clifford Neural Layers for PDE Modeling</a></li>
+<li><a href=/publication/berzins-2024-ginns/>Clifford Neural Layers for PDE Modeling</a></li>
 </ul>
 </div>
 </div>
