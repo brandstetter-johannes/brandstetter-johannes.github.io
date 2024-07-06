@@ -5,7 +5,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.0.0-beta.1 for Hugo">
 <meta name=author content="Johannes Brandstetter">
-<meta name=description content="We introduce Vision-LSTM (ViL), an adaption of the xLSTM building blocks to computer vision.">
+<meta name=description content="How far do we get in language modeling when scaling LSTMs to billions of parameters, leveraging the latest techniques from modern LLMs, but mitigating known limitations of LSTMs?">
 <link rel=alternate hreflang=en-us href=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#1565c0">
@@ -28,13 +28,13 @@
 <meta property="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="Johannes Brandstetter">
 <meta property="og:url" content="https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/">
-<meta property="og:title" content="Vision-LSTM -- xLSTM as Generic Vision Backbone | Johannes Brandstetter">
-<meta property="og:description" content="We introduce Vision-LSTM (ViL), an adaption of the xLSTM building blocks to computer vision."><meta property="og:image" content="https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/featured.png">
+<meta property="og:title" content="xLSTM -- Extended Long Short-Term Memory | Johannes Brandstetter">
+<meta property="og:description" content="How far do we get in language modeling when scaling LSTMs to billions of parameters, leveraging the latest techniques from modern LLMs, but mitigating known limitations of LSTMs?"><meta property="og:image" content="https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/featured.png">
 <meta property="twitter:image" content="https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/featured.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2024-06-06T12:55:17+02:00">
-<meta property="article:modified_time" content="2024-06-06T12:55:17+02:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/"},"headline":"Vision-LSTM -- xLSTM as Generic Vision Backbone","image":["https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/featured.png"],"datePublished":"2024-06-06T12:55:17+02:00","dateModified":"2024-06-06T12:55:17+02:00","author":{"@type":"Person","name":"Benedikt Alkin"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"We introduce Vision-LSTM (ViL), an adaption of the xLSTM building blocks to computer vision."}</script>
-<title>Vision-LSTM -- xLSTM as Generic Vision Backbone | Johannes Brandstetter</title>
+<meta property="article:published_time" content="2024-05-07T12:55:17+02:00">
+<meta property="article:modified_time" content="2024-05-07T12:55:17+02:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/"},"headline":"xLSTM -- Extended Long Short-Term Memory","image":["https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/featured.png"],"datePublished":"2024-05-07T12:55:17+02:00","dateModified":"2024-05-07T12:55:17+02:00","author":{"@type":"Person","name":"Maximilian Beck"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"How far do we get in language modeling when scaling LSTMs to billions of parameters, leveraging the latest techniques from modern LLMs, but mitigating known limitations of LSTMs?"}</script>
+<title>xLSTM -- Extended Long Short-Term Memory | Johannes Brandstetter</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper>
 <script src=/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js></script>
@@ -126,47 +126,48 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Vision-LSTM -- xLSTM as Generic Vision Backbone</h1>
+<h1>xLSTM -- Extended Long Short-Term Memory</h1>
 <div class=article-metadata>
 <div>
 <span>
-Benedikt Alkin</span>, <span>
 Maximilian Beck</span>, <span>
 Korbinian Poeppel</span>, <span>
-Sepp Hochreiter</span>, <span>
-Johannes Brandstetter</span>
+Markus Spanring</span>, <span>
+Andreas Auer</span>, <span>
+Oleksandra Prudnikova</span>, <span>
+Michael Kopp</span>, <span>
+Günter Klambauer</span>, <span>
+Johannes Brandstetter</span>, <span>
+Sepp Hochreiter</span>
 </div>
 <span class=article-date>
-June 2024
+May 2024
 </span>
 <span class=middot-divider></span>
 <span class=article-categories>
-<i class="fas fa-folder mr-1"></i><a href=/category/computer-vision/>Computer Vision</a></span>
+<i class="fas fa-folder mr-1"></i><a href=/category/large-language-models/>Large Language Models</a></span>
 </div>
 <div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2406.04303 target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2405.04517 target=_blank rel=noopener>
 PDF
 </a>
 <a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/beck-2024-xlstm/cite.bib>
 Cite
 </a>
-<a class="btn btn-outline-primary btn-page-header" href=https://github.com/nx-ai/vision-lstm target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://github.com/NX-AI/xlstm target=_blank rel=noopener>
 Code
 </a>
-<a class="btn btn-outline-primary btn-page-header" href=https://nx-ai.github.io/vision-lstm/ target=_blank rel=noopener>
-Project
-</a>
 </div>
 </div>
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:236px>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:675px;max-height:308px>
 <div style=position:relative>
-<img src=/publication/beck-2024-xlstm/featured_hudc4623eacaae69c19ae834e37cff285c_36506_720x0_resize_lanczos_3.png alt class=featured-image>
-<span class=article-header-caption>Vision-LSTM architecture</span>
+<img src=/publication/beck-2024-xlstm/featured.png alt class=featured-image>
+<span class=article-header-caption>xLSTM family</span>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Transformers are widely used as generic backbones in computer vision, despite initially introduced for natural language processing. Recently, the Long Short-Term Memory (LSTM) has been extended to a scalable and performant architecture - the xLSTM - which overcomes long-standing LSTM limitations via exponential gating and parallelizable matrix memory structure. In this report, we introduce Vision-LSTM (ViL), an adaption of the xLSTM building blocks to computer vision. ViL comprises a stack of xLSTM blocks where odd blocks process the sequence of patch tokens from top to bottom while even blocks go from bottom to top. Experiments show that ViL holds promise to be further deployed as new generic backbone for computer vision architectures.</p>
+<p class=pub-abstract>In the 1990s, the constant error carousel and gating were introduced as the central ideas of the Long Short-Term Memory (LSTM). Since then, LSTMs have stood the test of time and contributed to numerous deep learning success stories, in particular they constituted the first Large Language Models (LLMs). However, the advent of the Transformer technology with parallelizable self-attention at its core marked the dawn of a new era, outpacing LSTMs at scale. We now raise a simple question: How far do we get in language modeling when scaling LSTMs to billions of parameters, leveraging the latest techniques from modern LLMs, but mitigating known limitations of LSTMs? Firstly, we introduce exponential gating with appropriate normalization and stabilization techniques. Secondly, we modify the LSTM memory structure, obtaining: (i) sLSTM with a scalar memory, a scalar update, and new memory mixing, (ii) mLSTM that is fully parallelizable with a matrix memory and a covariance update rule. Integrating these LSTM extensions into residual block backbones yields xLSTM blocks that are then residually stacked into xLSTM architectures. Exponential gating and modified memory structures boost xLSTM capabilities to perform favorably when compared to state-of-the-art Transformers and State Space Models, both in performance and scaling.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -196,40 +197,39 @@ Conference paper
 <div class=space-below></div>
 <div class=article-style></div>
 <div class=article-tags>
-<a class="badge badge-light" href=/tag/computer-vision/>Computer Vision</a>
+<a class="badge badge-light" href=/tag/large-language-models/>Large Language Models</a>
 <a class="badge badge-light" href=/tag/xlstm/>xLSTM</a>
-<a class="badge badge-light" href=/tag/pretraining/>Pretraining</a>
 <a class="badge badge-light" href=/tag/deep-learning/>Deep Learning</a>
 </div>
 <div class=share-box aria-hidden=true>
 <ul class=share>
 <li>
-<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&text=Vision-LSTM%20--%20xLSTM%20as%20Generic%20Vision%20Backbone" target=_blank rel=noopener class=share-btn-twitter>
+<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&text=xLSTM%20--%20Extended%20Long%20Short-Term%20Memory" target=_blank rel=noopener class=share-btn-twitter>
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&t=Vision-LSTM%20--%20xLSTM%20as%20Generic%20Vision%20Backbone" target=_blank rel=noopener class=share-btn-facebook>
+<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&t=xLSTM%20--%20Extended%20Long%20Short-Term%20Memory" target=_blank rel=noopener class=share-btn-facebook>
 <i class="fab fa-facebook"></i>
 </a>
 </li>
 <li>
-<a href="mailto:?subject=Vision-LSTM%20--%20xLSTM%20as%20Generic%20Vision%20Backbone&body=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/" target=_blank rel=noopener class=share-btn-email>
+<a href="mailto:?subject=xLSTM%20--%20Extended%20Long%20Short-Term%20Memory&body=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/" target=_blank rel=noopener class=share-btn-email>
 <i class="fas fa-envelope"></i>
 </a>
 </li>
 <li>
-<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&title=Vision-LSTM%20--%20xLSTM%20as%20Generic%20Vision%20Backbone" target=_blank rel=noopener class=share-btn-linkedin>
+<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&title=xLSTM%20--%20Extended%20Long%20Short-Term%20Memory" target=_blank rel=noopener class=share-btn-linkedin>
 <i class="fab fa-linkedin-in"></i>
 </a>
 </li>
 <li>
-<a href="whatsapp://send?text=Vision-LSTM%20--%20xLSTM%20as%20Generic%20Vision%20Backbone%20https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/" target=_blank rel=noopener class=share-btn-whatsapp>
+<a href="whatsapp://send?text=xLSTM%20--%20Extended%20Long%20Short-Term%20Memory%20https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/" target=_blank rel=noopener class=share-btn-whatsapp>
 <i class="fab fa-whatsapp"></i>
 </a>
 </li>
 <li>
-<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&title=Vision-LSTM%20--%20xLSTM%20as%20Generic%20Vision%20Backbone" target=_blank rel=noopener class=share-btn-weibo>
+<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/publication/beck-2024-xlstm/&title=xLSTM%20--%20Extended%20Long%20Short-Term%20Memory" target=_blank rel=noopener class=share-btn-weibo>
 <i class="fab fa-weibo"></i>
 </a>
 </li>
@@ -239,10 +239,10 @@ Conference paper
 <h3>Related</h3>
 <ul>
 <li><a href=/publication/alkin-2024-vision-lstm/>Vision-LSTM -- xLSTM as Generic Vision Backbone</a></li>
+<li><a href=/publication/ramsauer-2020-hopfield/>Hopfield Networks is All You Need</a></li>
+<li><a href=/publication/widrich-2020-hopfield/>Modern hopfield networks and attention for immune repertoire classification</a></li>
 <li><a href=/publication/alkin-2024-mimrefiner/>Mim-refiner -- A contrastive learning boost from intermediate pre-trained representations</a></li>
-<li><a href=/publication/alkin-2024-upt/>Universal Physics Transformers -- A Framework For Efficiently Scaling Neural Operators</a></li>
 <li><a href=/publication/mayr-2021-bgnn/>Boundary Graph Neural Networks for 3D Simulations</a></li>
-<li><a href=/publication/brandstetter-2020-performer/>Looking at the Performer from a Hopfield point of view</a></li>
 </ul>
 </div>
 </div>
