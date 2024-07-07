@@ -5,7 +5,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.0.0-beta.1 for Hugo">
 <meta name=author content="Johannes Brandstetter">
-<meta name=description content="We introduce neural network layers based on operations on composite objects of scalars, vectors, and higher order objects such as bivectors. Published at ICLR 2023.">
+<meta name=description content="We introduce geometry-informed neural networks (GINNs) to train shape generative models without any data.">
 <link rel=alternate hreflang=en-us href=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#1565c0">
@@ -28,13 +28,13 @@
 <meta property="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="Johannes Brandstetter">
 <meta property="og:url" content="https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/">
-<meta property="og:title" content="Clifford Neural Layers for PDE Modeling | Johannes Brandstetter">
-<meta property="og:description" content="We introduce neural network layers based on operations on composite objects of scalars, vectors, and higher order objects such as bivectors. Published at ICLR 2023."><meta property="og:image" content="https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/featured.png">
+<meta property="og:title" content="Geometry-Informed Neural Networks | Johannes Brandstetter">
+<meta property="og:description" content="We introduce geometry-informed neural networks (GINNs) to train shape generative models without any data."><meta property="og:image" content="https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/featured.png">
 <meta property="twitter:image" content="https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/featured.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2022-09-08T12:55:17+02:00">
-<meta property="article:modified_time" content="2022-09-08T12:55:17+02:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/"},"headline":"Clifford Neural Layers for PDE Modeling","image":["https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/featured.png"],"datePublished":"2022-09-08T12:55:17+02:00","dateModified":"2022-09-08T12:55:17+02:00","author":{"@type":"Person","name":"Johannes Brandstetter"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"We introduce neural network layers based on operations on composite objects of scalars, vectors, and higher order objects such as bivectors. Published at ICLR 2023."}</script>
-<title>Clifford Neural Layers for PDE Modeling | Johannes Brandstetter</title>
+<meta property="article:published_time" content="2024-02-21T12:55:17+02:00">
+<meta property="article:modified_time" content="2024-02-21T12:55:17+02:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/"},"headline":"Geometry-Informed Neural Networks","image":["https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/featured.png"],"datePublished":"2024-02-21T12:55:17+02:00","dateModified":"2024-02-21T12:55:17+02:00","author":{"@type":"Person","name":"Arturs Berzins"},"publisher":{"@type":"Organization","name":"Johannes Brandstetter","logo":{"@type":"ImageObject","url":"https://brandstetter-johannes.github.io/images/icon_hu3751bf80caad288f7f32134a8ecae786_4078_192x192_fill_lanczos_center_3.png"}},"description":"We introduce geometry-informed neural networks (GINNs) to train shape generative models without any data."}</script>
+<title>Geometry-Informed Neural Networks | Johannes Brandstetter</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper>
 <script src=/js/wowchemy-init.min.7de282f2047be3c570af3a58788341e7.js></script>
@@ -126,55 +126,47 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Clifford Neural Layers for PDE Modeling</h1>
+<h1>Geometry-Informed Neural Networks</h1>
 <div class=article-metadata>
 <div>
 <span>
-Johannes Brandstetter</span>, <span>
-Rianne van den Berg</span>, <span>
-Max Welling</span>, <span>
-Jayesh Gupta</span>
+Arturs Berzins</span>, <span>
+Andreas Radler</span>, <span>
+Sebastian Sanokowski</span>, <span>
+Sepp Hochreiter</span>, <span>
+Johannes Brandstetter</span>
 </div>
 <span class=article-date>
-September 2022
+February 2024
 </span>
 <span class=middot-divider></span>
 <span class=article-categories>
 <i class="fas fa-folder mr-1"></i><a href=/category/geometric-deep-learning/>Geometric Deep Learning</a></span>
 </div>
 <div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2209.04934 target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2402.14009 target=_blank rel=noopener>
 PDF
 </a>
 <a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/berzins-2024-ginns/cite.bib>
 Cite
 </a>
-<a class="btn btn-outline-primary btn-page-header" href=https://microsoft.github.io/cliffordlayers/ target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://github.com/ml-jku/GINNs-Geometry-informed-Neural-Networks target=_blank rel=noopener>
 Code
 </a>
-<a class="btn btn-outline-primary btn-page-header" href=https://www.microsoft.com/en-us/research/lab/microsoft-research-ai4science/articles/introducing-cliffordlayers-neural-network-layers-inspired-by-clifford-geometric-algebras/ target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://arturs-berzins.github.io/GINN/ target=_blank rel=noopener>
 Project
-</a>
-<a class="btn btn-outline-primary btn-page-header" href=/media/Clifford-ICLR-2023-poster.pdf target=_blank rel=noopener>
-Poster
-</a>
-<a class="btn btn-outline-primary btn-page-header" href=/media/Clifford-ICLR-2023.pdf target=_blank rel=noopener>
-Slides
-</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://davidruhe.github.io/2023/06/06/clifford-layers.html target=_blank rel=noopener>
-Blog post
 </a>
 </div>
 </div>
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:482px>
 <div style=position:relative>
 <img src=/publication/berzins-2024-ginns/featured_hu37d8aae38d48dfc801ecb4736e7af687_692903_720x0_resize_lanczos_3.png alt class=featured-image>
-<span class=article-header-caption>Clifford Fourier Neural Operator</span>
+<span class=article-header-caption>GINN paradigm</span>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Partial differential equations (PDEs) see widespread use in sciences and engineering to describe simulation of physical processes as scalar and vector fields interacting and coevolving over time. Due to the computationally expensive nature of their standard solution methods, neural PDE surrogates have become an active research topic to accelerate these simulations. However, current methods do not explicitly take into account the relationship between different fields and their internal components, which are often correlated. Viewing the time evolution of such correlated fields through the lens of multivector fields allows us to overcome these limitations. Multivector fields consist of scalar, vector, as well as higher-order components, such as bivectors and trivectors. Their algebraic properties, such as multiplication, addition and other arithmetic operations can be described by Clifford algebras. To our knowledge, this paper presents the first usage of such multivector representations together with Clifford convolutions and Clifford Fourier transforms in the context of deep learning. The resulting Clifford neural layers are universally applicable and will find direct use in the areas of fluid dynamics, weather forecasting, and the modeling of physical systems in general. We empirically evaluate the benefit of Clifford neural layers by replacing convolution and Fourier operations in common neural PDE surrogates by their Clifford counterparts on 2D Navier-Stokes and weather modeling tasks, as well as 3D Maxwell equations. For similar parameter count, Clifford neural layers consistently improve generalization capabilities of the tested neural PDE surrogates.</p>
+<p class=pub-abstract>Geometry is a ubiquitous language of computer graphics, design, and engineering. However, the lack of large shape datasets limits the application of state-of-the-art supervised learning methods and motivates the exploration of alternative learning strategies. To this end, we introduce geometry-informed neural networks (GINNs) to train shape generative models mph{without any data}. GINNs combine (i) learning under constraints, (ii) neural fields as a suitable representation, and (iii) generating diverse solutions to under-determined problems. We apply GINNs to several two and three-dimensional problems of increasing levels of complexity. Our results demonstrate the feasibility of training shape generative models in a data-free setting. This new paradigm opens several exciting research directions, expanding the application of generative models into domains where data is sparse.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -195,7 +187,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>11th International Conference on Learning Representations (ICLR), 2023</em></div>
+<div class="col-12 col-md-9">Preprint</div>
 </div>
 </div>
 <div class=col-md-1></div>
@@ -204,46 +196,41 @@ Conference paper
 <div class=space-below></div>
 <div class=article-style></div>
 <div class=article-tags>
-<a class="badge badge-light" href=/tag/partial-differential-equations/>Partial Differential Equations</a>
-<a class="badge badge-light" href=/tag/learn2simulate/>Learn2Simulate</a>
-<a class="badge badge-light" href=/tag/clifford-algebras/>Clifford Algebras</a>
-<a class="badge badge-light" href=/tag/geometric-algebras/>Geometric Algebras</a>
+<a class="badge badge-light" href=/tag/pinns/>PINNs</a>
 <a class="badge badge-light" href=/tag/geometric-deep-learning/>Geometric Deep Learning</a>
-<a class="badge badge-light" href=/tag/ai4science/>AI4Science</a>
-<a class="badge badge-light" href=/tag/neural-surrogates/>Neural Surrogates</a>
-<a class="badge badge-light" href=/tag/neural-operators/>Neural Operators</a>
-<a class="badge badge-light" href=/tag/microsoft/>Microsoft</a>
+<a class="badge badge-light" href=/tag/learn2engineer/>Learn2Engineer</a>
 <a class="badge badge-light" href=/tag/deep-learning/>Deep Learning</a>
+<a class="badge badge-light" href=/tag/neural-fields/>Neural Fields</a>
 </div>
 <div class=share-box aria-hidden=true>
 <ul class=share>
 <li>
-<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&text=Clifford%20Neural%20Layers%20for%20PDE%20Modeling" target=_blank rel=noopener class=share-btn-twitter>
+<a href="https://twitter.com/intent/tweet?url=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&text=Geometry-Informed%20Neural%20Networks" target=_blank rel=noopener class=share-btn-twitter>
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&t=Clifford%20Neural%20Layers%20for%20PDE%20Modeling" target=_blank rel=noopener class=share-btn-facebook>
+<a href="https://www.facebook.com/sharer.php?u=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&t=Geometry-Informed%20Neural%20Networks" target=_blank rel=noopener class=share-btn-facebook>
 <i class="fab fa-facebook"></i>
 </a>
 </li>
 <li>
-<a href="mailto:?subject=Clifford%20Neural%20Layers%20for%20PDE%20Modeling&body=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/" target=_blank rel=noopener class=share-btn-email>
+<a href="mailto:?subject=Geometry-Informed%20Neural%20Networks&body=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/" target=_blank rel=noopener class=share-btn-email>
 <i class="fas fa-envelope"></i>
 </a>
 </li>
 <li>
-<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&title=Clifford%20Neural%20Layers%20for%20PDE%20Modeling" target=_blank rel=noopener class=share-btn-linkedin>
+<a href="https://www.linkedin.com/shareArticle?url=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&title=Geometry-Informed%20Neural%20Networks" target=_blank rel=noopener class=share-btn-linkedin>
 <i class="fab fa-linkedin-in"></i>
 </a>
 </li>
 <li>
-<a href="whatsapp://send?text=Clifford%20Neural%20Layers%20for%20PDE%20Modeling%20https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/" target=_blank rel=noopener class=share-btn-whatsapp>
+<a href="whatsapp://send?text=Geometry-Informed%20Neural%20Networks%20https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/" target=_blank rel=noopener class=share-btn-whatsapp>
 <i class="fab fa-whatsapp"></i>
 </a>
 </li>
 <li>
-<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&title=Clifford%20Neural%20Layers%20for%20PDE%20Modeling" target=_blank rel=noopener class=share-btn-weibo>
+<a href="https://service.weibo.com/share/share.php?url=https://brandstetter-johannes.github.io/publication/berzins-2024-ginns/&title=Geometry-Informed%20Neural%20Networks" target=_blank rel=noopener class=share-btn-weibo>
 <i class="fab fa-weibo"></i>
 </a>
 </li>
@@ -252,11 +239,11 @@ Conference paper
 <div class="article-widget content-widget-hr">
 <h3>Related</h3>
 <ul>
-<li><a href=/publication/brandstetter-2022-clifford/>Clifford Neural Layers for PDE Modeling</a></li>
+<li><a href=/publication/akhound-sadegh-2023-lps-pinn/>Lie Point Symmetries and Physics-Informed Networks</a></li>
+<li><a href=/publication/ruhe-2023-cgenns/>Clifford Group Equivariant Neural Networks</a></li>
 <li><a href=/publication/ruhe-2023-cgans/>Geometric Clifford Algebra Networks</a></li>
-<li><a href=/publication/brandstetter-2022-lpsda/>Lie Point Symmetry Data Augmentation for Neural PDE Solvers</a></li>
-<li><a href=/publication/lippe-2023-pderefiner/>PDE-Refiner - Achieving Accurate Long Rollouts with Neural PDE Solvers</a></li>
-<li><a href=/publication/gupta-2022-pdearena/>Towards Multi-spatiotemporal-scale Generalized PDE Modeling</a></li>
+<li><a href=/publication/brandstetter-2022-clifford/>Clifford Neural Layers for PDE Modeling</a></li>
+<li><a href=/publication/brandstetter-2021-segnn/>Geometric and Physical Quantities Improve E(3) Equivariant Message Passing</a></li>
 </ul>
 </div>
 </div>
