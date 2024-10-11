@@ -30,23 +30,7 @@ design:
 
 **[Feb 2024]** I have started as Chief Researcher at [NXAI](https://www.nx-ai.com/).
 
-**[Nov 2023]** I am featured in the  [Tagesspiegel: ki-simulationen-fuer-die-industrie](https://background.tagesspiegel.de/digitalisierung/ki-simulationen-fuer-die-industrie). 
-
-**[Nov 2023]** I am featured in the [Industriemagazin: ai-forscher-johannes-brandstetter-der-rueckkehrer/](https://industriemagazin.at/news/ai-forscher-johannes-brandstetter-der-rueckkehrer/).
-
-**[Nov 2023]** ReThink Compliance! I am participating in a public discussion [ReThink Compliance!](https://businesscircle.at/compliance/konferenz/compliance-now/) at Stegersbach.
-
-**[Nov 2023]** invest.austria conference! I am participating in a public discussion [The Rise of AI: Opportunities and Threats](https://www.invest-austria.com/de/invest-austria-conference/?gclid=Cj0KCQiAuqKqBhDxARIsAFZELmJ2_f4lQ1aM7rDWudlBjWY2_l06cvXroPXVW7_RAkcKeSeDryBRRe0aApLbEALw_wcB) at gorgeous Apothekertrakt Schönbrunn in Vienna.
-
-**[Oct 2023]** PoliTalk "Wehrhafte Demokratie – Kampf gegen Fake News und Manipulation". I discussed with the head of state Thomas Stelzer and Ulrike Schiesser on the role of AI when it comes to spreading fake news.
-
-**[Oct 2023]** AI Venture Hub @ Ars Electronica Center Linz! I discussed with Robert Weber, host of the [Industrial AI Podcast](https://aipod.de/), about what it takes to make Linz a worldwide AI hub.  
-
-**[Oct 2023]** SimTech2023! I presented our paper [ClimaX -- A foundation model for weather and climate](https://brandstetter-johannes.github.io/publication/nguyen-2023-climax/) at the International Conference on Data-Integrated Simulation Science (SimTech2023) in Stuttgart. 
-
-**[Oct 2023]** I have started my own group "AI for data-driven simulations” at the [Institute for Machine Learning](https://www.jku.at/en/institute-for-machine-learning/) at the Johannes Kepler University (JKU) Linz.
-
-**[Sep 2023]** Three papers accepted at NeurIPS 2023! We will present [Clifford Group Equivariant Neural Networks](https://brandstetter-johannes/publication/ruhe-2023-cgenns/) as oral, [PDE-Refiner: Achieving Accurate Long Rollouts with Neural PDE Solvers](https://brandstetter-johannes.github.io/publication/lippe-2023-pderefiner/) as spotlight and [Lie Point Symmetries and Physics-Informed Networks](https://brandstetter-johannes.github.io/publication/akhound-sadegh-2023-lps-pinn/) as poster in New Orleans.
+**[Nov 2023]** I have re-joined Sepp Hochreiter's group, starting my own group “AI for data-driven simulations”
 
 </div>
 
