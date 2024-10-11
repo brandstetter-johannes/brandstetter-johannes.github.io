@@ -30,7 +30,7 @@ design:
 
 **[Feb 2024]** I have started as Chief Researcher at [NXAI](https://www.nx-ai.com/).
 
-**[Nov 2023]** I have re-joined Sepp Hochreiter's group, starting my own group “AI for data-driven simulations”
+**[Oct 2023]** I have re-joined Sepp Hochreiter's group, starting my own group “AI for data-driven simulations”
 
 </div>
 
