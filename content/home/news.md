@@ -28,6 +28,8 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
+**[Feb 2025]** Together with Dennis Just and Miks Mikelsons I have co-founded [Emmi AI](https://www.emmi.ai/).  
+
 **[Feb 2024]** I have started as Chief Researcher at [NXAI](https://www.nx-ai.com/).
 
 **[Oct 2023]** I have re-joined Sepp Hochreiter's group, starting my own group “AI for data-driven simulations”

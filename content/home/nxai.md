@@ -11,7 +11,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 20
 
-title: NXAI
+title: Emmi AI
 subtitle: ''
 
 
@@ -28,15 +28,25 @@ design:
 
 <div style="overflow-y:scroll;max-height:400px;">
 
-**Mission statement of NXAI**
+**About Emmi AI**
 
-With NXAI, we are building an European AI hub that comprises world-class research, close ties to local universities, and strong industrial know-how and support. Our mission is to create a large-scale entrepreneurial framework to transform latest scientific developments into industrial-ready applications. 
+At Emmi AI, we believe that the next frontier of industrial engineering lies at the intersection of artificial intelligence and physics. The world of large-scale engineering and manufacturing is ripe for transformation, yet today's innovation processes are hindered by slow, costly simulations and prohibitive computational requirements.
 
-At its core, NXAI is dedicated to independent research, which we believe is our greatest strength. However, we aspire to go further. We are building a pipeline that converts our research into high-impact industrial applications. Our goal is to become a nimble AI powerhouse at the forefront of the AI revolution in Europe.
+Emmi AI is here to change that.
 
-Our research focus is on two key areas. The first is AI4Simulation, where we are building foundational models for industrial simulations. The second is Large Language Models (LLMs), highlighted by our flagship project xLSTM. In both domains, we have world-leading experts committed to unlocking the vast potential for creating downstream applications for engineering and industrial use cases
+Our vision is bold: to pioneer universally applicable AI-driven physics simulation models that accelerate engineering and manufacturing processes across industries – from aviation and energy to semiconductors, automotive and chemicals. We aim to enable real-time interaction, streamline production planning, and unlock new possibilities in design optimization.
 
-More information can be found at our webpage [https://www.nx-ai.com/](https://www.nx-ai.com/).
+The future we envision is one where AI surrogates reduce computational costs, foster rapid innovation, and drive industrial-scale engineering at unprecedented speeds. Our starting point is computational fluid dynamics (CFD), but our ambition extends to real-time adaptive simulations and multi-physics models.
+
+Industrial-scale problems demand industrial-scale solutions. Much like medium-range weather forecasting challenged deep learning due to its scale, industrial simulations with tens of millions of mesh cells present a similar challenge – one we are ready to tackle. We are inspired by the ambition and intellectual rigor of Emmy Noether, whose groundbreaking contributions to physics mirror our commitment to redefining industrial engineering.
+
+Emmi AI is not just building models; we are building the future of industrial innovation. As we scale, we seek partners who share our conviction: that AI is not merely a tool, but a catalyst for transforming how we design, build, and innovate.
+
+To our investors, collaborators, and future team members – join us as we push the boundaries of what’s possible. Together, we will unlock a new era of efficiency, creativity, and excellence in engineering.
+
+Let's build the future!
+
+More information can be found at our webpage [https://www.emmi.ai/](https://www.emmi.ai/).
 
 </div>
 

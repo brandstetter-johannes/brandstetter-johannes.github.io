@@ -1,9 +1,9 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: We identify particle clustering originating from tensile instabilities as one of the primary pitfalls. Based on these insights, we enhance both training and rollout inference of GNN-based simulators with varying components from standard SPH solvers, including pressure, viscous, and external force components.
+title: NeuralSPH -- Improved neural modeling of lagrangian fluid dynamics
 subtitle: ''
-summary: ''
+summary: 'We identify particle clustering originating from tensile instabilities as one of the primary pitfalls. Based on these insights, we enhance both training and rollout inference of GNN-based simulators with varying components from standard SPH solvers, including pressure, viscous, and external force components.'
 authors:
 - Artur P. Toshev 
 - Jonas A. Erbesdobler

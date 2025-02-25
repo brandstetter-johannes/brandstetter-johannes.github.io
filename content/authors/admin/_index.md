@@ -1,5 +1,5 @@
 ---
-role: Chief Researcher @ NXAI, Assistant Professor @ JKU Linz
+role: Co-founder and Chief Scientist @ Emmi AI, Assistant Professor @ JKU Linz
 avatar_filename: avatar.jpg
 # bio: not working
 # interests:
@@ -35,7 +35,7 @@ highlight_name: false
 title: Johannes Brandstetter
 email: ""
 ---
-I am leading a group "AI for data-driven simulations" at the [Institute for Machine Learning](https://www.jku.at/en/institute-for-machine-learning/) at the Johannes Kepler University (JKU) Linz. Additionally, I am a Chief Researcher at [NXAI](https://www.nx-ai.com/) - our new European AI hub in Linz (Austria). 
+I am leading a group "AI for data-driven simulations" at the [Institute for Machine Learning](https://www.jku.at/en/institute-for-machine-learning/) at the Johannes Kepler University (JKU) Linz. Additionally, I am a Co-founder and Chief Scientist at [Emmi AI](https://www.emmi.ai/) - our push towards the data-driven revolution in science/engineering. 
 
 
 I have obtained my PhD after working several years at the [CMS experiment at CERN](https://cms.cern/). During this time, I had the privilege of learning from brilliant minds from all around the world, and got the chance to co-author seminal papers in the realm of Higgs boson physics. In 2018, after completing my PhD, my career trajectory shifted towards machine learning, and I was fortunate to join the research group of Mr LSTM Sepp Hochreiter in Linz. Under Sepp's mentorship, I delved into the intricacies of machine learning and modern deep learning over a span of 2.5 years. 

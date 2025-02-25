@@ -22,13 +22,21 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Co-Founder and Chief Researcher
+    company: Emmi AI
+    company_url: https://www.emmi.ai/
+    location: Linz(Austria)
+    date_start: '2024-02-01'
+    data_end: 
+    description: Together with Dennis Just and Miks Mikelsons, I have co-founded [Emmi AI](https://emmi.ai/), where I am Chief Scientiest. At Emmi AI, we are redefining how industries innovate. Traditional simulations are slow, expensive, and computationally heavy. We make them fast, scalable and intelligent! Our AI-Powered physics architecture and models unlock Real-time interaction, slashing simulation times from days to seconds.
+
   - title: Chief Researcher
     company: NXAI
     company_url: https://www.nx-ai.com/
     location: Linz(Austria)
     date_start: '2024-02-01'
-    data_end: ''
-    description: I am Chief Researcher at the newly founded [NXAI](https://www.nx-ai.com/), building up a world-class research unit for LLM modeling and AI4Simulation 
+    data_end: '2025-01-31'
+    description: Chief Researcher at [NXAI](https://www.nx-ai.com/), building up a world-class research unit for LLM modeling and AI4Simulation. 
     
   - title: Assistant Professor, Group Lead
     company: Johannes Kepler University (JKU) 
@@ -37,7 +45,7 @@ experience:
     date_start: '2023-10-01'
     date_end: ''
     description: 
-        Group lead at the [Institute for Machine Learning](https://www.jku.at/en/institute-for-machine-learning/) at the Johannes Kepler University (JKU). I have started a group “AI for data-driven simulations”. More to come soon!
+        Group lead at the [Institute for Machine Learning](https://www.jku.at/en/institute-for-machine-learning/) at the Johannes Kepler University (JKU). I have started a group “AI for data-driven simulations”. 
 
   - title: Visiting Researcher
     company: Microsoft Research
